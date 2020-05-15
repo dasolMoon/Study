@@ -15,7 +15,7 @@ namespace k_means_m
         Point[] p = null;
         int k = 0;
         List<List<Point>> lastClusters = null, nowClusters = null;
-        int lastAvgk = 0, nowAvgk = 0;
+        int lastAvgk = 0, nowAvgk = 0; //이거안썼음
         double lastDistance = 0, nowDistance = 0;
         int lastChange = 0;
         public Form1()
@@ -41,10 +41,7 @@ namespace k_means_m
             //최고의 k를 구하기위한 검사
             chooseK();
 
-            //현재 클러스터 목록을 이전 클러스터로 적용 후 초기화
-            lastClusters = nowClusters;
-            lastAvgk = nowAvgk;
-            lastDistance = nowDistance;
+            
            
         }
 
@@ -93,7 +90,14 @@ namespace k_means_m
 
             if (change < lastChange)
             {
-                //최적의 k가 이미 등장했을 수 있다.
+                //최적의 k가 이미 등장했을 수 있다 !! 
+            }
+            else
+            {
+                //현재 클러스터 목록을 이전 클러스터로 적용 후 초기화
+                lastClusters = nowClusters;
+                lastAvgk = nowAvgk;//이거안썼음
+                lastDistance = nowDistance;
             }
         }
     }

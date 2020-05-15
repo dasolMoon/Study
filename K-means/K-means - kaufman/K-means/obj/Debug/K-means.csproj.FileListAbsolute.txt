@@ -1,0 +1,18 @@
+C:\Users\hopo5\Desktop\아톰\K-means\K-means\K-means\bin\Debug\K-means.exe
+C:\Users\hopo5\Desktop\아톰\K-means\K-means\K-means\bin\Debug\K-means.pdb
+C:\Users\hopo5\Desktop\아톰\K-means\K-means\K-means\obj\Debug\K-means.csprojResolveAssemblyReference.cache
+C:\Users\hopo5\Desktop\아톰\K-means\K-means\K-means\obj\Debug\K_means.Form1.resources
+C:\Users\hopo5\Desktop\아톰\K-means\K-means\K-means\obj\Debug\K_means.Properties.Resources.resources
+C:\Users\hopo5\Desktop\아톰\K-means\K-means\K-means\obj\Debug\K-means.csproj.GenerateResource.cache
+C:\Users\hopo5\Desktop\아톰\K-means\K-means\K-means\obj\Debug\K-means.csproj.CoreCompileInputs.cache
+C:\Users\hopo5\Desktop\아톰\K-means\K-means\K-means\obj\Debug\K-means.exe
+C:\Users\hopo5\Desktop\아톰\K-means\K-means\K-means\obj\Debug\K-means.pdb
+C:\Users\hopo5\Desktop\아톰\K-means\K-means - kaufman\K-means\bin\Debug\K-means.exe
+C:\Users\hopo5\Desktop\아톰\K-means\K-means - kaufman\K-means\bin\Debug\K-means.pdb
+C:\Users\hopo5\Desktop\아톰\K-means\K-means - kaufman\K-means\obj\Debug\K-means.csprojResolveAssemblyReference.cache
+C:\Users\hopo5\Desktop\아톰\K-means\K-means - kaufman\K-means\obj\Debug\K_means.Form1.resources
+C:\Users\hopo5\Desktop\아톰\K-means\K-means - kaufman\K-means\obj\Debug\K_means.Properties.Resources.resources
+C:\Users\hopo5\Desktop\아톰\K-means\K-means - kaufman\K-means\obj\Debug\K-means.csproj.GenerateResource.cache
+C:\Users\hopo5\Desktop\아톰\K-means\K-means - kaufman\K-means\obj\Debug\K-means.csproj.CoreCompileInputs.cache
+C:\Users\hopo5\Desktop\아톰\K-means\K-means - kaufman\K-means\obj\Debug\K-means.exe
+C:\Users\hopo5\Desktop\아톰\K-means\K-means - kaufman\K-means\obj\Debug\K-means.pdb

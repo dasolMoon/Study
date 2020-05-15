@@ -1,0 +1,9 @@
+C:\Users\hopo5\Desktop\아톰\HCM\Max_Min_Learnig\Max_Min_Learnig\bin\Debug\Max_Min_Learnig.exe
+C:\Users\hopo5\Desktop\아톰\HCM\Max_Min_Learnig\Max_Min_Learnig\bin\Debug\Max_Min_Learnig.pdb
+C:\Users\hopo5\Desktop\아톰\HCM\Max_Min_Learnig\Max_Min_Learnig\obj\Debug\Max_Min_Learnig.Form1.resources
+C:\Users\hopo5\Desktop\아톰\HCM\Max_Min_Learnig\Max_Min_Learnig\obj\Debug\Max_Min_Learnig.Properties.Resources.resources
+C:\Users\hopo5\Desktop\아톰\HCM\Max_Min_Learnig\Max_Min_Learnig\obj\Debug\Max_Min_Learnig.csproj.GenerateResource.cache
+C:\Users\hopo5\Desktop\아톰\HCM\Max_Min_Learnig\Max_Min_Learnig\obj\Debug\Max_Min_Learnig.csproj.CoreCompileInputs.cache
+C:\Users\hopo5\Desktop\아톰\HCM\Max_Min_Learnig\Max_Min_Learnig\obj\Debug\Max_Min_Learnig.exe
+C:\Users\hopo5\Desktop\아톰\HCM\Max_Min_Learnig\Max_Min_Learnig\obj\Debug\Max_Min_Learnig.pdb
+C:\Users\hopo5\Desktop\아톰\HCM\Max_Min_Learnig\Max_Min_Learnig\obj\Debug\Max_Min_Learnig.csprojAssemblyReference.cache

@@ -1,0 +1,9 @@
+C:\Users\hopo5\Desktop\아톰\퍼지\FCM\FCM\bin\Debug\FCM.exe
+C:\Users\hopo5\Desktop\아톰\퍼지\FCM\FCM\bin\Debug\FCM.pdb
+C:\Users\hopo5\Desktop\아톰\퍼지\FCM\FCM\obj\Debug\FCM.Form1.resources
+C:\Users\hopo5\Desktop\아톰\퍼지\FCM\FCM\obj\Debug\FCM.Properties.Resources.resources
+C:\Users\hopo5\Desktop\아톰\퍼지\FCM\FCM\obj\Debug\FCM.csproj.GenerateResource.cache
+C:\Users\hopo5\Desktop\아톰\퍼지\FCM\FCM\obj\Debug\FCM.csproj.CoreCompileInputs.cache
+C:\Users\hopo5\Desktop\아톰\퍼지\FCM\FCM\obj\Debug\FCM.exe
+C:\Users\hopo5\Desktop\아톰\퍼지\FCM\FCM\obj\Debug\FCM.pdb
+C:\Users\hopo5\Desktop\아톰\퍼지\FCM\FCM\obj\Debug\FCM.csprojAssemblyReference.cache

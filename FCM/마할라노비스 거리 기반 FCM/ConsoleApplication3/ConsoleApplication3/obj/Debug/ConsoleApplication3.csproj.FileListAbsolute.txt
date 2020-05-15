@@ -1,0 +1,44 @@
+c:\users\bob\documents\visual studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe.config
+c:\users\bob\documents\visual studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csprojResolveAssemblyReference.cache
+c:\users\bob\documents\visual studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe
+c:\users\bob\documents\visual studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
+c:\users\bob\documents\visual studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
+c:\users\bob\documents\visual studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
+C:\Users\Bob\Desktop\새 폴더\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe.config
+C:\Users\Bob\Desktop\새 폴더\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
+C:\Users\Bob\Desktop\새 폴더\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
+C:\Users\Bob\Desktop\새 폴더\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe
+C:\Users\Bob\Desktop\새 폴더\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
+C:\Users\Bob\Desktop\새 폴더\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csprojResolveAssemblyReference.cache
+C:\Users\Bob\Desktop\새 폴더 - 복사본\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe.config
+C:\Users\Bob\Desktop\새 폴더 - 복사본\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
+C:\Users\Bob\Desktop\새 폴더 - 복사본\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
+C:\Users\Bob\Desktop\새 폴더 - 복사본\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe
+C:\Users\Bob\Desktop\새 폴더 - 복사본\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
+C:\Users\Bob\Desktop\새 폴더 - 복사본\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csprojResolveAssemblyReference.cache
+C:\Users\Bob\Desktop\FCM 동적 구현\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe.config
+C:\Users\Bob\Desktop\FCM 동적 구현\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
+C:\Users\Bob\Desktop\FCM 동적 구현\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
+C:\Users\Bob\Desktop\FCM 동적 구현\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe
+C:\Users\Bob\Desktop\FCM 동적 구현\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
+C:\Users\Bob\Desktop\FCM 동적 구현\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csprojResolveAssemblyReference.cache
+C:\Users\Bob\Desktop\마할라노비스거리값 추가\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe.config
+C:\Users\Bob\Desktop\마할라노비스거리값 추가\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
+C:\Users\Bob\Desktop\마할라노비스거리값 추가\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
+C:\Users\Bob\Desktop\마할라노비스거리값 추가\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe
+C:\Users\Bob\Desktop\마할라노비스거리값 추가\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
+C:\Users\Bob\Desktop\마할라노비스거리값 추가\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csprojResolveAssemblyReference.cache
+F:\인공지능그외알고리즘\FCM 마할라노비스 거리값 계산 - 201195012 김백천\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe.config
+F:\인공지능그외알고리즘\FCM 마할라노비스 거리값 계산 - 201195012 김백천\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe
+F:\인공지능그외알고리즘\FCM 마할라노비스 거리값 계산 - 201195012 김백천\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
+F:\인공지능그외알고리즘\FCM 마할라노비스 거리값 계산 - 201195012 김백천\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csprojAssemblyReference.cache
+F:\인공지능그외알고리즘\FCM 마할라노비스 거리값 계산 - 201195012 김백천\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csproj.CoreCompileInputs.cache
+F:\인공지능그외알고리즘\FCM 마할라노비스 거리값 계산 - 201195012 김백천\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
+F:\인공지능그외알고리즘\FCM 마할라노비스 거리값 계산 - 201195012 김백천\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
+C:\Users\hopo5\Desktop\아톰\퍼지\마할라노비스 거리 기반 FCM\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe.config
+C:\Users\hopo5\Desktop\아톰\퍼지\마할라노비스 거리 기반 FCM\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe
+C:\Users\hopo5\Desktop\아톰\퍼지\마할라노비스 거리 기반 FCM\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
+C:\Users\hopo5\Desktop\아톰\퍼지\마할라노비스 거리 기반 FCM\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csproj.CoreCompileInputs.cache
+C:\Users\hopo5\Desktop\아톰\퍼지\마할라노비스 거리 기반 FCM\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
+C:\Users\hopo5\Desktop\아톰\퍼지\마할라노비스 거리 기반 FCM\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
+C:\Users\hopo5\Desktop\아톰\퍼지\마할라노비스 거리 기반 FCM\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csprojAssemblyReference.cache

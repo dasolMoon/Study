@@ -1,0 +1,37 @@
+C:\Users\CSH\Documents\Visual Studio 2013\Projects\kmwf\kmwf\bin\Debug\kmwf.exe.config
+C:\Users\CSH\Documents\Visual Studio 2013\Projects\kmwf\kmwf\bin\Debug\kmwf.exe
+C:\Users\CSH\Documents\Visual Studio 2013\Projects\kmwf\kmwf\bin\Debug\kmwf.pdb
+C:\Users\CSH\Documents\Visual Studio 2013\Projects\kmwf\kmwf\obj\Debug\kmwf.csprojResolveAssemblyReference.cache
+C:\Users\CSH\Documents\Visual Studio 2013\Projects\kmwf\kmwf\obj\Debug\kmwf.Form1.resources
+C:\Users\CSH\Documents\Visual Studio 2013\Projects\kmwf\kmwf\obj\Debug\kmwf.Properties.Resources.resources
+C:\Users\CSH\Documents\Visual Studio 2013\Projects\kmwf\kmwf\obj\Debug\kmwf.csproj.GenerateResource.Cache
+C:\Users\CSH\Documents\Visual Studio 2013\Projects\kmwf\kmwf\obj\Debug\kmwf.exe
+C:\Users\CSH\Documents\Visual Studio 2013\Projects\kmwf\kmwf\obj\Debug\kmwf.pdb
+C:\Users\CSH\Desktop\kmwf\kmwf\bin\Debug\kmwf.exe.config
+C:\Users\CSH\Desktop\kmwf\kmwf\obj\Debug\kmwf.exe
+C:\Users\CSH\Desktop\kmwf\kmwf\obj\Debug\kmwf.pdb
+C:\Users\CSH\Desktop\kmwf\kmwf\bin\Debug\kmwf.exe
+C:\Users\CSH\Desktop\kmwf\kmwf\bin\Debug\kmwf.pdb
+C:\Users\CSH\Desktop\kmwf\kmwf\obj\Debug\kmwf.csprojResolveAssemblyReference.cache
+C:\Users\CSH\Desktop\kmwf\kmwf\obj\Debug\kmwf.Form1.resources
+C:\Users\CSH\Desktop\kmwf\kmwf\obj\Debug\kmwf.Properties.Resources.resources
+C:\Users\CSH\Desktop\kmwf\kmwf\obj\Debug\kmwf.csproj.GenerateResource.Cache
+C:\Users\CSH\Desktop\c# 발표\kmwf\kmwf\bin\Debug\kmwf.exe.config
+C:\Users\CSH\Desktop\c# 발표\kmwf\kmwf\obj\Debug\kmwf.exe
+C:\Users\CSH\Desktop\c# 발표\kmwf\kmwf\obj\Debug\kmwf.pdb
+C:\Users\CSH\Desktop\c# 발표\kmwf\kmwf\bin\Debug\kmwf.exe
+C:\Users\CSH\Desktop\c# 발표\kmwf\kmwf\bin\Debug\kmwf.pdb
+C:\Users\CSH\Desktop\c# 발표\kmwf\kmwf\obj\Debug\kmwf.csprojResolveAssemblyReference.cache
+C:\Users\CSH\Desktop\c# 발표\kmwf\kmwf\obj\Debug\kmwf.Form1.resources
+C:\Users\CSH\Desktop\c# 발표\kmwf\kmwf\obj\Debug\kmwf.Properties.Resources.resources
+C:\Users\CSH\Desktop\c# 발표\kmwf\kmwf\obj\Debug\kmwf.csproj.GenerateResource.Cache
+C:\Users\hopo5\Desktop\아톰\K-means\kmwf\kmwf\bin\Debug\kmwf.exe.config
+C:\Users\hopo5\Desktop\아톰\K-means\kmwf\kmwf\bin\Debug\kmwf.exe
+C:\Users\hopo5\Desktop\아톰\K-means\kmwf\kmwf\bin\Debug\kmwf.pdb
+C:\Users\hopo5\Desktop\아톰\K-means\kmwf\kmwf\obj\Debug\kmwf.csprojResolveAssemblyReference.cache
+C:\Users\hopo5\Desktop\아톰\K-means\kmwf\kmwf\obj\Debug\kmwf.Form1.resources
+C:\Users\hopo5\Desktop\아톰\K-means\kmwf\kmwf\obj\Debug\kmwf.Properties.Resources.resources
+C:\Users\hopo5\Desktop\아톰\K-means\kmwf\kmwf\obj\Debug\kmwf.csproj.GenerateResource.cache
+C:\Users\hopo5\Desktop\아톰\K-means\kmwf\kmwf\obj\Debug\kmwf.csproj.CoreCompileInputs.cache
+C:\Users\hopo5\Desktop\아톰\K-means\kmwf\kmwf\obj\Debug\kmwf.exe
+C:\Users\hopo5\Desktop\아톰\K-means\kmwf\kmwf\obj\Debug\kmwf.pdb

@@ -1,0 +1,9 @@
+C:\Users\dudwo\source\repos\k-means_m\k-means_m\bin\Debug\k-means_m.exe
+C:\Users\dudwo\source\repos\k-means_m\k-means_m\bin\Debug\k-means_m.pdb
+C:\Users\dudwo\source\repos\k-means_m\k-means_m\obj\Debug\k-means_m.csprojAssemblyReference.cache
+C:\Users\dudwo\source\repos\k-means_m\k-means_m\obj\Debug\k_means_m.Form1.resources
+C:\Users\dudwo\source\repos\k-means_m\k-means_m\obj\Debug\k_means_m.Properties.Resources.resources
+C:\Users\dudwo\source\repos\k-means_m\k-means_m\obj\Debug\k-means_m.csproj.GenerateResource.cache
+C:\Users\dudwo\source\repos\k-means_m\k-means_m\obj\Debug\k-means_m.csproj.CoreCompileInputs.cache
+C:\Users\dudwo\source\repos\k-means_m\k-means_m\obj\Debug\k-means_m.exe
+C:\Users\dudwo\source\repos\k-means_m\k-means_m\obj\Debug\k-means_m.pdb

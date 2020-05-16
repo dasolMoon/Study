@@ -6,3 +6,11 @@ C:\Users\shdmf\source\repos\K-means_m\K-means_m\obj\Debug\K_means_m.Properties.R
 C:\Users\shdmf\source\repos\K-means_m\K-means_m\obj\Debug\K-means_m.csproj.GenerateResource.cache
 C:\Users\shdmf\source\repos\K-means_m\K-means_m\obj\Debug\K-means_m.exe
 C:\Users\shdmf\source\repos\K-means_m\K-means_m\obj\Debug\K-means_m.pdb
+D:\GitRoom\Study\K-means_m\K-means_m\bin\Debug\K-means_m.exe
+D:\GitRoom\Study\K-means_m\K-means_m\bin\Debug\K-means_m.pdb
+D:\GitRoom\Study\K-means_m\K-means_m\obj\Debug\K-means_m.csprojAssemblyReference.cache
+D:\GitRoom\Study\K-means_m\K-means_m\obj\Debug\K_means_m.Form1.resources
+D:\GitRoom\Study\K-means_m\K-means_m\obj\Debug\K_means_m.Properties.Resources.resources
+D:\GitRoom\Study\K-means_m\K-means_m\obj\Debug\K-means_m.csproj.GenerateResource.cache
+D:\GitRoom\Study\K-means_m\K-means_m\obj\Debug\K-means_m.exe
+D:\GitRoom\Study\K-means_m\K-means_m\obj\Debug\K-means_m.pdb

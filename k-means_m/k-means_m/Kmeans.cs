@@ -24,7 +24,7 @@ namespace K_means_m
         double[,] old_centroid = null;
         int[,] U = null;
         int k = 3;
-
+        bool re = true;
 
         public Kmeans()
         {
@@ -60,63 +60,80 @@ namespace K_means_m
 
         private void Run()
         {
-            //소속값 배열로 랜덤하게 소속도를 준다
+            //소속값 배열로 랜덤하게 소속도를 준다 (예외처리를 할까 변수를 바꿔줄까)
             for (int i = 0; i < data_count; i++)
                 for (int j = 0; j < k; j++)
                 {
                     U[i, j] = 1;
-                    i++;
+                    i++;//예외
                 }
 
-            //각 클러스터의 centroid값을 구한다
-            for (int i = 0; i < k; i++)
+            while (re)
             {
-                double sum_x = 0, sum_y = 0;
-                for (int j = 0; j < data_count; j++)
+
+                //각 클러스터의 centroid값을 구한다
+                for (int i = 0; i < k; i++)
                 {
-                    if (U[j,i] == 1)
+                    double sum_x = 0, sum_y = 0;
+                    for (int j = 0; j < data_count; j++)
                     {
-                        sum_x += input_x[j, 0];
-                        sum_y += input_x[j, 1];
+                        if (U[j, i] == 1)
+                        {
+                            sum_x += input_x[j, 0];
+                            sum_y += input_x[j, 1];
+                        }
+
+                    }
+                    centroid[i, 0] = sum_x / data_count;
+                    centroid[i, 1] = sum_y / data_count;
+                }
+
+                //centroid 값 저장
+                foreach (int i in centroid)
+                {
+                    old_centroid[i, 0] = centroid[i, 0];
+                    old_centroid[i, 1] = centroid[i, 1];
+                }
+
+                //모든 데이터에 대하여 가장 가까운 cluster를 선택한다.
+                for (int i = 0; i < data_count; i++)
+                {
+                    double min_index = 0, min_distance = Int32.MaxValue;
+                    for (int j = 0; j < k; j++)
+                    {
+                        double distance = euclidean(input_x[i, 0], input_x[i, 1], centroid[j, 0], centroid[j, 1]);
+                        if (distance < min_distance)
+                        {
+                            min_index = j;
+                            min_distance = distance;
+                        }
+                    }
+                    //해당하는 부분만 1표시하기 
+                    for (int r = 0; r < k; r++)
+                    {
+                        if (r == min_index) U[i, r] = 1;
+
+                        else U[i, r] = 0;
+
                     }
 
                 }
-                centroid[i, 0] = sum_x / data_count;
-                centroid[i, 1] = sum_y / data_count;
-            }
 
-            //centroid 값 저장
-            foreach (int i in centroid)
-            {
-                old_centroid[i, 0] = centroid[i, 0];
-                old_centroid[i, 1] = centroid[i, 1];
-            }
-
-            //모든 데이터에 대하여 가장 가까운 cluster를 선택한다.
-            for (int i = 0; i < data_count; i++)
-            {
-                double min_index = 0, min_distance = Int32.MaxValue;
-                for (int j = 0; j < k; j++)
+                //centroid 비교 
+                bool isSame = true;
+                foreach (int i in centroid)
                 {
-                    double distance = euclidean(input_x[i,0], input_x[i, 1],centroid[j,0], centroid[j, 1]);
-                    if (distance < min_distance)
+                    for (int j = 0; j < 2; j++)
                     {
-                        min_index = j;
-                        min_distance = distance;
+                        if (old_centroid[i, j] != centroid[i, j])
+                        {
+                            isSame = false;
+                        }
                     }
                 }
-                //해당하는 부분만 1표시하기 
-                for (int r = 0; r < k; r++)
-                {
-                    if(r == min_index) U[i, r] = 1;
-                        
-                    else  U[i, r] = 0;
-                        
-                }
 
+                if (isSame == true) re = false;
             }
-
-            //centroid 비교 
         }
 
         //유클리디언

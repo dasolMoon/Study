@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 
 namespace K_means
-{
+{   
     class Class1
     {
         StringBuilder sb = new StringBuilder();
@@ -13,7 +13,7 @@ namespace K_means
         public static double[] array = new double[DATA*3];
         public const int CLUSTER = 3;
         public const int DATA = 150;
-        const int COORD = 2;
+        const int COORD = 2; ///  xy 정리
         public static double[,] x = new double[DATA, COORD];
         public static double[,] d = new double[DATA, CLUSTER];
         public static double[,] v = new double[CLUSTER, COORD];
@@ -31,26 +31,26 @@ namespace K_means
             //파일을불러와서ull값만날때까지읽어오는소스
             //파일의내용을차원배열에넣어준다
                 
+            ///array배열에 읽어들인 데이터를 모두 넣어준다
             while ((line = fp1.ReadLine()) != null)
             {
                 array[count] = Convert.ToDouble(line);
                 //스트링으로받아온데이터를 double형으로바꿔준다
                 count++;
-            }
+            } 
 
             //count값을다시초기화
+            ///x와 y값을 구분해서 x배열에 입력
             count = 0;
-
             for (i = 0; i < DATA; i++)
             {
                 for (j = 0; j < COORD; j++)
                 {
                     x[i, j] = array[count];
-                    //sb.AppendLine("x :" + "[" + i + "]" + "[" + j + "]" + " = " + x[i, j]);
                     count++;
                 }
             }
-
+            /*
             //int temp;
             //for (i = 0; i < DATA; i++)
             //{
@@ -71,7 +71,8 @@ namespace K_means
             //    }
             //    //sb.AppendLine();
             //}
-
+            */
+            ///U를 0으로 초기화함 <-꼭 해야될까..? 
             for (i = 0; i < DATA; i++)
             {
                 for (j = 0; j < CLUSTER; j++)
@@ -80,6 +81,7 @@ namespace K_means
                 }
             }
 
+            ///간혈적으로 U에 1을 넣어줌 아하 ! 
             for (i = 0; i < DATA;)
             {
                 for (j = 0; j < CLUSTER; j++)
@@ -90,6 +92,7 @@ namespace K_means
                 //i++;
             }
             
+            ///거리을 계산하나봅니다 아마 centroid겠쥬 
             for (i = 0; i < CLUSTER; i++)
             {
                 sumx = 0;
@@ -109,6 +112,7 @@ namespace K_means
                 sb.AppendLine("v[" + i + ", 0] : " + v[i, 0]);
                 sb.AppendLine("v[" + i + ", 1] : " + v[i, 1]);
             }
+            ///여기까지 
             
             do
             {

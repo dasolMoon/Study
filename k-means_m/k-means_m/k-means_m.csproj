@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B5A99708-6E50-4853-B1DF-45BEDF736F37}</ProjectGuid>
+    <ProjectGuid>{61CAA413-56ED-41FA-899F-6ECB9BB334F5}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>k_means_m</RootNamespace>
-    <AssemblyName>k-means_m</AssemblyName>
+    <RootNamespace>K_means_m</RootNamespace>
+    <AssemblyName>K-means_m</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -53,7 +53,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Input.cs" />
+    <Compile Include="InputData.cs" />
+    <Compile Include="Kmeans.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

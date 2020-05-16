@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace k_means_m
+namespace K_means_m
 {
     static class Program
     {

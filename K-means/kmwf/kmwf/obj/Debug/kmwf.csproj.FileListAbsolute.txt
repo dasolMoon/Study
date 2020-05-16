@@ -35,3 +35,12 @@ C:\Users\hopo5\Desktop\아톰\K-means\kmwf\kmwf\obj\Debug\kmwf.csproj.GenerateRe
 C:\Users\hopo5\Desktop\아톰\K-means\kmwf\kmwf\obj\Debug\kmwf.csproj.CoreCompileInputs.cache
 C:\Users\hopo5\Desktop\아톰\K-means\kmwf\kmwf\obj\Debug\kmwf.exe
 C:\Users\hopo5\Desktop\아톰\K-means\kmwf\kmwf\obj\Debug\kmwf.pdb
+D:\GitRoom\Study\K-means\kmwf\kmwf\bin\Debug\kmwf.exe.config
+D:\GitRoom\Study\K-means\kmwf\kmwf\bin\Debug\kmwf.exe
+D:\GitRoom\Study\K-means\kmwf\kmwf\bin\Debug\kmwf.pdb
+D:\GitRoom\Study\K-means\kmwf\kmwf\obj\Debug\kmwf.csprojAssemblyReference.cache
+D:\GitRoom\Study\K-means\kmwf\kmwf\obj\Debug\kmwf.Form1.resources
+D:\GitRoom\Study\K-means\kmwf\kmwf\obj\Debug\kmwf.Properties.Resources.resources
+D:\GitRoom\Study\K-means\kmwf\kmwf\obj\Debug\kmwf.csproj.GenerateResource.cache
+D:\GitRoom\Study\K-means\kmwf\kmwf\obj\Debug\kmwf.exe
+D:\GitRoom\Study\K-means\kmwf\kmwf\obj\Debug\kmwf.pdb

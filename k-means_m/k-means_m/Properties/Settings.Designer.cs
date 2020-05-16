@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace k_means_m.Properties
+namespace K_means_m.Properties
 {
 
 

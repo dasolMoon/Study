@@ -24,7 +24,7 @@ namespace K_means
         {
             int i, j, k, count = 0, v_count = 0;
             double num, min, sum, sumx, sumy;
-            FileStream fp11 = new FileStream("C:\\Users\\hopo5\\Desktop\\아톰\\K-means\\test6.txt", FileMode.Open);
+            FileStream fp11 = new FileStream("D:\\GitRoom\\Study\\K-means\\test6.txt", FileMode.Open);
             StreamReader fp1 = new StreamReader(fp11);
             string line;
             //파일에서데이터값을스트링으로받아오기때문에스트링변수잡아줌

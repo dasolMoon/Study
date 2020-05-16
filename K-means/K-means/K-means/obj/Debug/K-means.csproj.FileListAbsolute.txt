@@ -7,3 +7,11 @@ C:\Users\hopo5\Desktop\아톰\K-means\K-means\K-means\obj\Debug\K-means.csproj.G
 C:\Users\hopo5\Desktop\아톰\K-means\K-means\K-means\obj\Debug\K-means.csproj.CoreCompileInputs.cache
 C:\Users\hopo5\Desktop\아톰\K-means\K-means\K-means\obj\Debug\K-means.exe
 C:\Users\hopo5\Desktop\아톰\K-means\K-means\K-means\obj\Debug\K-means.pdb
+D:\GitRoom\Study\K-means\K-means\K-means\bin\Debug\K-means.exe
+D:\GitRoom\Study\K-means\K-means\K-means\bin\Debug\K-means.pdb
+D:\GitRoom\Study\K-means\K-means\K-means\obj\Debug\K-means.csprojAssemblyReference.cache
+D:\GitRoom\Study\K-means\K-means\K-means\obj\Debug\K_means.Form1.resources
+D:\GitRoom\Study\K-means\K-means\K-means\obj\Debug\K_means.Properties.Resources.resources
+D:\GitRoom\Study\K-means\K-means\K-means\obj\Debug\K-means.csproj.GenerateResource.cache
+D:\GitRoom\Study\K-means\K-means\K-means\obj\Debug\K-means.exe
+D:\GitRoom\Study\K-means\K-means\K-means\obj\Debug\K-means.pdb

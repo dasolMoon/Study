@@ -85,7 +85,47 @@ namespace K_means_m
                 centroid[i, 1] = sum_y / data_count;
             }
 
+            //centroid 값 저장
+            foreach (int i in centroid)
+            {
+                old_centroid[i, 0] = centroid[i, 0];
+                old_centroid[i, 1] = centroid[i, 1];
+            }
+
             //모든 데이터에 대하여 가장 가까운 cluster를 선택한다.
+            for (int i = 0; i < data_count; i++)
+            {
+                double min_index = 0, min_distance = Int32.MaxValue;
+                for (int j = 0; j < k; j++)
+                {
+                    double distance = euclidean(input_x[i,0], input_x[i, 1],centroid[j,0], centroid[j, 1]);
+                    if (distance < min_distance)
+                    {
+                        min_index = j;
+                        min_distance = distance;
+                    }
+                }
+                //해당하는 부분만 1표시하기 
+                for (int r = 0; r < k; r++)
+                {
+                    if(r == min_index) U[i, r] = 1;
+                        
+                    else  U[i, r] = 0;
+                        
+                }
+
+            }
+
+            //centroid 비교 
+        }
+
+        //유클리디언
+        double euclidean(double x1, double y1, double x2, double y2) //a와 b사이의 거리
+        {
+            double distance = 0;
+            distance = Math.Sqrt(Math.Pow(x2 - x1, 2.0) + Math.Pow(y2 - y1, 2.0));
+
+            return distance;
         }
     }
 }

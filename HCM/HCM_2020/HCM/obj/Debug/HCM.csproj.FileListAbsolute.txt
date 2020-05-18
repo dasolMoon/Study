@@ -1,0 +1,10 @@
+G:\HCM\HCM\bin\Debug\HCM.exe.config
+G:\HCM\HCM\bin\Debug\HCM.exe
+G:\HCM\HCM\bin\Debug\HCM.pdb
+G:\HCM\HCM\obj\Debug\HCM.csprojAssemblyReference.cache
+G:\HCM\HCM\obj\Debug\HCM.Form1.resources
+G:\HCM\HCM\obj\Debug\HCM.Properties.Resources.resources
+G:\HCM\HCM\obj\Debug\HCM.csproj.GenerateResource.cache
+G:\HCM\HCM\obj\Debug\HCM.csproj.CoreCompileInputs.cache
+G:\HCM\HCM\obj\Debug\HCM.exe
+G:\HCM\HCM\obj\Debug\HCM.pdb

@@ -1,0 +1,8 @@
+D:\GitRoom\Study\HCM_m\HCM_m\bin\Debug\HCM_m.exe
+D:\GitRoom\Study\HCM_m\HCM_m\bin\Debug\HCM_m.pdb
+D:\GitRoom\Study\HCM_m\HCM_m\obj\Debug\HCM_m.csprojAssemblyReference.cache
+D:\GitRoom\Study\HCM_m\HCM_m\obj\Debug\HCM_m.Form1.resources
+D:\GitRoom\Study\HCM_m\HCM_m\obj\Debug\HCM_m.Properties.Resources.resources
+D:\GitRoom\Study\HCM_m\HCM_m\obj\Debug\HCM_m.csproj.GenerateResource.cache
+D:\GitRoom\Study\HCM_m\HCM_m\obj\Debug\HCM_m.exe
+D:\GitRoom\Study\HCM_m\HCM_m\obj\Debug\HCM_m.pdb

@@ -15,5 +15,14 @@ namespace HCM_m
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += "****HCM을 시작합니다****\n";
+
+            hcm input = new hcm();
+            double[,] a = input.Run();
+
+        }
     }
 }

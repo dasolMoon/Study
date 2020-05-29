@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 /* 2020.05.16
  * 
@@ -28,9 +29,11 @@ namespace HCM_m
         int[,] U = null;
         int c = 3;
         bool re = true;
+        Form1 form = null;
 
         public HardCmeans()
         {
+            //초기 작업 실행
             Init();
         }
 
@@ -100,7 +103,10 @@ namespace HCM_m
                 //이전 centroid와 비교
                 compare();
             }
-            Console.WriteLine("반복할지말지선택");
+            Console.WriteLine("클러스터링 완료 화면에 출력");
+
+
+
         }
 
         void FindCluster() //모든 데이터에 대하여 가장 가까운 cluster를 선택한다.
@@ -193,6 +199,15 @@ namespace HCM_m
                     Console.Write(centroid[i, j] + " \n");
                 }
             Console.WriteLine("");
+        }
+
+        public void PrintTextBox(Form1 form1)
+        {
+            for (int i = 0; i < length; i++)
+            {
+                form1.textBox1 += "클러스터 중심값 : ";
+            }
+            
         }
     }
 }

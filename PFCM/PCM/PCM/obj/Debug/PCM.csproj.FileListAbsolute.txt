@@ -1,0 +1,10 @@
+C:\Users\hopo5\Desktop\4학년 1학기\캡스톤디자인\PCM\PCM\bin\Debug\PCM.exe.config
+C:\Users\hopo5\Desktop\4학년 1학기\캡스톤디자인\PCM\PCM\bin\Debug\PCM.exe
+C:\Users\hopo5\Desktop\4학년 1학기\캡스톤디자인\PCM\PCM\bin\Debug\PCM.pdb
+C:\Users\hopo5\Desktop\4학년 1학기\캡스톤디자인\PCM\PCM\obj\Debug\PCM.csprojAssemblyReference.cache
+C:\Users\hopo5\Desktop\4학년 1학기\캡스톤디자인\PCM\PCM\obj\Debug\PCM.Form1.resources
+C:\Users\hopo5\Desktop\4학년 1학기\캡스톤디자인\PCM\PCM\obj\Debug\PCM.Properties.Resources.resources
+C:\Users\hopo5\Desktop\4학년 1학기\캡스톤디자인\PCM\PCM\obj\Debug\PCM.csproj.GenerateResource.cache
+C:\Users\hopo5\Desktop\4학년 1학기\캡스톤디자인\PCM\PCM\obj\Debug\PCM.csproj.CoreCompileInputs.cache
+C:\Users\hopo5\Desktop\4학년 1학기\캡스톤디자인\PCM\PCM\obj\Debug\PCM.exe
+C:\Users\hopo5\Desktop\4학년 1학기\캡스톤디자인\PCM\PCM\obj\Debug\PCM.pdb

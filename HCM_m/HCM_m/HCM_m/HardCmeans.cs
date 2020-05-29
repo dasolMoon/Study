@@ -5,7 +5,6 @@ using System.Text;
 using System.Windows.Forms;
 
 /* 2020.05.16
- * 
  * 클러스터의 수는 3개로 설정함 
  * 데이터의 갯수는 n개
  * 
@@ -16,7 +15,11 @@ using System.Windows.Forms;
  * U : n번째 데이터가 m번째 클러스터에 속하면 1 아니면 0인 값을 갖는 binary 변수 배열 
  * C : 클러스터의 수
  * 
- * 2020.05.29 변수 자료형 편집 및 코드 편집
+ * 2020.05.29 
+ * 변수 자료형 편집 및 코드 편집
+ * 
+ * 2020.05.29 
+ * 화면 출력 메소드 PrintTextBox 편집
 */
 namespace HCM_m
 {

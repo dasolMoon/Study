@@ -1,0 +1,10 @@
+C:\Users\hopo5\Desktop\4학년 1학기\캡스톤디자인\PFCM\PFCM\PFCM\bin\Debug\PFCM.exe.config
+C:\Users\hopo5\Desktop\4학년 1학기\캡스톤디자인\PFCM\PFCM\PFCM\bin\Debug\PFCM.exe
+C:\Users\hopo5\Desktop\4학년 1학기\캡스톤디자인\PFCM\PFCM\PFCM\bin\Debug\PFCM.pdb
+C:\Users\hopo5\Desktop\4학년 1학기\캡스톤디자인\PFCM\PFCM\PFCM\obj\Debug\PFCM.csprojAssemblyReference.cache
+C:\Users\hopo5\Desktop\4학년 1학기\캡스톤디자인\PFCM\PFCM\PFCM\obj\Debug\PFCM.Form1.resources
+C:\Users\hopo5\Desktop\4학년 1학기\캡스톤디자인\PFCM\PFCM\PFCM\obj\Debug\PFCM.Properties.Resources.resources
+C:\Users\hopo5\Desktop\4학년 1학기\캡스톤디자인\PFCM\PFCM\PFCM\obj\Debug\PFCM.csproj.GenerateResource.cache
+C:\Users\hopo5\Desktop\4학년 1학기\캡스톤디자인\PFCM\PFCM\PFCM\obj\Debug\PFCM.csproj.CoreCompileInputs.cache
+C:\Users\hopo5\Desktop\4학년 1학기\캡스톤디자인\PFCM\PFCM\PFCM\obj\Debug\PFCM.exe
+C:\Users\hopo5\Desktop\4학년 1학기\캡스톤디자인\PFCM\PFCM\PFCM\obj\Debug\PFCM.pdb

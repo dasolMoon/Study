@@ -19,6 +19,7 @@ namespace K_means_m
         private void button1_Click(object sender, EventArgs e)
         {
             Kmeans kmeans = new Kmeans();
+            kmeans.PrintTextBox(this);
         }
     }
 }

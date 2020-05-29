@@ -18,7 +18,8 @@ namespace HCM_m
 
         private void button1_Click(object sender, EventArgs e)
         {
-            HardCmeans kmeans = new HardCmeans();
+            HardCmeans hcm = new HardCmeans();
+            hcm.PrintTextBox(this);
         }
     }
 }

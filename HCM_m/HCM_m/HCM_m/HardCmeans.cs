@@ -29,7 +29,6 @@ namespace HCM_m
         int[,] U = null;
         int c = 3;
         bool re = true;
-        Form1 form = null;
 
         public HardCmeans()
         {
@@ -103,8 +102,7 @@ namespace HCM_m
                 //이전 centroid와 비교
                 compare();
             }
-            Console.WriteLine("클러스터링 완료 화면에 출력");
-
+            Console.WriteLine("클러스터링 완료");
 
 
         }
@@ -203,11 +201,28 @@ namespace HCM_m
 
         public void PrintTextBox(Form1 form1)
         {
-            for (int i = 0; i < length; i++)
+            string show = null;
+            //form1.textBox1.Text
+
+            //클러스터 출력
+            for (int i = 0; i < centroid.GetLength(0); i++)
             {
-                form1.textBox1 += "클러스터 중심값 : ";
+                show += (i + 1) + "번째 클러스터  \r\n";
+                show += "Centroid : (" + centroid[i, 0] + ", " + centroid[i, 1] + ") \r\n";
+
+                int count = 1;
+                for (int j = 0; j < U.GetLength(0); j++)
+                {
+                    if (U[j, i] == 1)
+                    {
+                        show += (i + 1) + " - " + count + " : (" + input_x[j, 0] + ", " + input_x[j, 1] + ") \r\n";
+                        count++;
+                    }
+                }
+                show += "\r\n";
             }
-            
+
+            form1.textBox1.Text += show;
         }
     }
 }

@@ -18,12 +18,21 @@ namespace FCM_m
 {
     class FCM
     {
-        int CLUSTER = 3; //임의로 설정해도 되나?
+        int CLUSTER = 3; //임의로 설정해도 되나? ->되는듯
+
+        //입력데이터
         int[,] inputData = null;
-        double[,] uBinary = null, uFuzzy=null;
-        int R = 0;// ()반복 횟수 
         int dataCount = 0; //입력 데이터의 갯수
-        bool replay = true;
+
+        //전체 입력데이터의 소속도 입력하는 배열
+        double[,] u = null;//, uFuzzy=null;
+
+        //클러스터별 중심값
+        double[] centroid = null;
+
+        bool replay = true;//반복을 결정하는 bool변수
+        int R = 0;// ()반복 횟수 
+       
         public FCM()
         {
             Init();
@@ -37,30 +46,45 @@ namespace FCM_m
             dataCount = inputData.GetLength(0);
 
 
-            //전체 배열 u초기화
-            uBinary = new double[CLUSTER, dataCount];
-            uFuzzy = new double[CLUSTER, dataCount];
+            //전체 배열 초기화
+            u = new double[CLUSTER, dataCount];
+            centroid = new double[CLUSTER];
+            //uFuzzy = new double[CLUSTER, dataCount];
+
+
         }
 
-        private void Run() //FCM 핵심 메소드
+        private void Run() //FCM 핵심 메소드 Run
         {
             //초기 랜덤 소속함수 정의
-            for (int j = 0; j < uBinary.GetLength(0); j++)
+            for (int j = 0; j < u.GetLength(0); j++)
             {
                 for (int i = 0; i < CLUSTER; i++)
                 {
-                    uBinary[i, j] = 1;
-                    uFuzzy[i, j] = 0.1;
-
+                    u[i, j] = 1;
                 }
             }
 
 
+            // 각 클러스터에 대한 중심 벡터 계산
+            setCentroid();
 
             //조건에 맞지 않으면(메소드에서 수정해주지않으면) while구간 반복
             while (replay)
             {
 
+            }
+        }
+
+        private void setCentroid()// 각 클러스터에 대한 중심 벡터 계산
+        {
+            double numerator = 0;//분자 설정
+            double denomintor = 0;//분모 설정
+
+            for (int i = 0; i < CLUSTER; i++)
+            {
+
+                //centroid[i] = /
             }
         }
     }

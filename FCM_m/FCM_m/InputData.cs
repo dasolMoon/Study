@@ -30,15 +30,15 @@ namespace FCM_m
                 185,197,180,212,170,215,150,202,153,202,153,195,163,188,166,179,168,181,163,186,155,188,152,196,156,208,147,
                 213,147,221,147,229,150,230,150,232,153,240,165,242,165,243,157,244,156,249,155,254,152,264,147,264,147,278,
                 141,289,143};
-            inputData = new int[INPUT_TYPE, data.Length];
+            inputData = new int[data.Length, INPUT_TYPE];
         }
 
         public void Run() //입력된 데이터를 x, y구분하여 input_data에 2차원배열로 대입한다.
         {
             int count = 0;
-            for (int j = 0; j < data.Length; j++)
+            for (int i = 0; i < data.Length; i++)
             {
-                for (int i = 0; i < 1; i++)
+                for (int j = 0; j < 1; j++)
                 {
                     inputData[i, j] = data[count++];
                 }

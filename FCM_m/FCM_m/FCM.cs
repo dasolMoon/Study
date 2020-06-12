@@ -44,6 +44,19 @@ namespace FCM_m
 
         private void Run() //FCM 핵심 메소드
         {
+            //초기 랜덤 소속함수 정의
+            for (int j = 0; j < uBinary.GetLength(0); j++)
+            {
+                for (int i = 0; i < CLUSTER; i++)
+                {
+                    uBinary[i, j] = 1;
+                    uFuzzy[i, j] = 0.1;
+
+                }
+            }
+
+
+
             //조건에 맞지 않으면(메소드에서 수정해주지않으면) while구간 반복
             while (replay)
             {

@@ -19,6 +19,8 @@ namespace FCM_m
     class FCM
     {
         int CLUSTER = 3; //임의로 설정해도 되나? ->되는듯
+        int INPUT_TYPE = 2; //입력 데이터중 한 쌍이 되는 데이터의 갯수
+        int M = 2;// 지수의 가중치 ->사실 잘 모르겠음
 
         //입력데이터
         int[,] inputData = null;
@@ -28,7 +30,7 @@ namespace FCM_m
         double[,] u = null;//, uFuzzy=null;
 
         //클러스터별 중심값
-        double[] centroid = null;
+        double[,] centroid = null;
 
         bool replay = true;//반복을 결정하는 bool변수
         int R = 0;// ()반복 횟수 
@@ -48,7 +50,7 @@ namespace FCM_m
 
             //전체 배열 초기화
             u = new double[CLUSTER, dataCount];
-            centroid = new double[CLUSTER];
+            centroid = new double[CLUSTER, INPUT_TYPE];
             //uFuzzy = new double[CLUSTER, dataCount];
 
 
@@ -79,12 +81,17 @@ namespace FCM_m
         private void setCentroid()// 각 클러스터에 대한 중심 벡터 계산
         {
             double numerator = 0;//분자 설정
-            double denomintor = 0;//분모 설정
+            double denominator = 0;//분모 설정
 
-            for (int i = 0; i < CLUSTER; i++)
+            for (int j = 0; j < CLUSTER; j++)
             {
 
-                //centroid[i] = /
+                for (int i = 0; i < dataCount; i++)
+                {
+                    /* 한글파일의 centroid 세부부분 읽어볼것
+                    denominator += Math.Pow(u[j, i], M);
+                    numerator += Math.Pow(u[j, i], M) **/
+                }
             }
         }
     }

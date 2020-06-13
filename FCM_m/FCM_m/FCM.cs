@@ -68,6 +68,11 @@ namespace FCM_m
             // 각 클러스터에 대한 중심 벡터 계산
             SetCentroid();
 
+            //각 데이터들과 클러스터 중심과의 거리를 구한 후 
+            //새로운 소속행렬 구성
+            SetNewU();
+
+
             //조건에 맞지 않으면(메소드에서 수정해주지않으면) while구간 반복
             while (replay)
             {
@@ -91,6 +96,23 @@ namespace FCM_m
                     centroid[j, r] = numerator / denominator;
                 }
             }
+        }
+
+        private void SetNewU()//새로운 소속행렬 구성
+        {
+            for (int i = 0; i < dataCount; i++)
+            { // i번째 데이터 Xi
+                for (int j = 0; j < CLUSTER; j++)
+                {// j번째 클러스터 Cj
+                    //ㅇ이어서
+                }
+            }
+        }
+
+        private double[,] Distance(double[,] temp)
+        {
+
+            return temp;
         }
     }
 }

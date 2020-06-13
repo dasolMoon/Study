@@ -8,19 +8,20 @@ using System.Text;
  * InputData클래스에서 inputData를 가져온 후 FCM작업을 수행한다
  * 1.전체(U)행렬 초기화 ㅇ
  * 2.클러스터 중심백터 계산
- * 3.전체(U)행렬 업데이트 <-UU(k+1) - UU(k)< (어떤기호)이면 정지, 
- *                                        아니면 2단계로 돌아감
+ * 3.전체(U)행렬 업데이트 
+ * 4.UU(k+1) - UU(k)< (임계값)이면 정지, 아니면 2단계로 돌아가 반복
  *                                        
- *   U끼리의 계산을 할 때(행렬계산) 따로 메소드가 필요하다. 
- *   U는 포함 된다 안 된다 배열(uBinary)과 소속도를 표현하는 배열(uFuzzy)로 두개 필요하다 
+ *  
  */
 namespace FCM_m
 {
     class FCM
     {
-        int CLUSTER = 3; //임의로 설정해도 되나? ->되는듯
-        int INPUT_TYPE = 2; //입력 데이터중 한 쌍이 되는 데이터의 갯수
-        int M = 2;// 지수의 가중치 ->사실 잘 모르겠음
+        //정적변수
+        static int CLUSTER = 3; //클러스터 개수
+        static int INPUT_TYPE = 2; //입력 데이터중 한 쌍이 되는 데이터의 개수
+        static int M = 2;// 지수의 가중치 
+        static double THRESHOLD = 0.0002;
 
         //입력데이터
         int[,] inputData = null;
@@ -28,13 +29,15 @@ namespace FCM_m
 
         //전체 입력데이터의 소속도 입력하는 배열
         double[,] u = null;//, uFuzzy=null;
+        double[,] lastU = null;
+
 
         //클러스터별 중심값
         double[,] centroid = null;
 
         bool replay = true;//반복을 결정하는 bool변수
-        int R = 0;// ()반복 횟수 
-       
+        int reCount = 0;// ()반복 횟수 
+
         public FCM()
         {
             Init();
@@ -49,7 +52,7 @@ namespace FCM_m
 
 
             //전체 배열 초기화
-            u = new double[CLUSTER, dataCount];
+            u = new double[dataCount, CLUSTER];
             centroid = new double[CLUSTER, INPUT_TYPE];
             //uFuzzy = new double[CLUSTER, dataCount];
 
@@ -59,39 +62,41 @@ namespace FCM_m
         public void Run() //FCM 핵심 메소드 Run
         {
             //초기 랜덤 소속함수 정의
-            for(int i =0; i<dataCount; i++)
+            for (int i = 0; i < dataCount; i++)
             {
                 int c = i % 3;
-                u[c, i] = 1;
+                u[i, c] = 1;
             }
 
-            // 각 클러스터에 대한 중심 벡터 계산
-            SetCentroid();
-
-            //각 데이터들과 클러스터 중심과의 거리를 구한 후 
-            //새로운 소속행렬 구성
-            SetNewU();
-
-
-            //조건에 맞지 않으면(메소드에서 수정해주지않으면) while구간 반복
-            while (replay)
+            do
             {
+                reCount++;
+                // 각 클러스터에 대한 중심 벡터 계산
+                SetCentroid();
 
-            }
+                //각 데이터들과 클러스터 중심과의 거리를 구한 후 
+                //새로운 소속행렬 구성
+                SetNewU();
+
+                //식 종료판정
+                Comparison();
+            } while (replay);//종료조건에 맞지 않으면 반복
+
+            Console.WriteLine("종료");
         }
 
         private void SetCentroid()// 각 클러스터에 대한 중심 벡터 계산
         {
-           for (int j = 0; j < CLUSTER; j++)
-           {
+            for (int j = 0; j < CLUSTER; j++)
+            {
                 for (int r = 0; r < INPUT_TYPE; r++)  //x와 y 따로 - 변수 r 사용
                 {
                     double numerator = 0;//분자 설정
                     double denominator = 0;//분모 설정
                     for (int i = 0; i < dataCount; i++)
                     {
-                        numerator += Math.Pow(u[j, i], M) * inputData[i, r]; //분자
-                        denominator += Math.Pow(u[j, i], M);//분모
+                        numerator += Math.Pow(u[i, j], M) * inputData[i, r]; //분자
+                        denominator += Math.Pow(u[i, j], M);//분모
                     }
                     centroid[j, r] = numerator / denominator;
                 }
@@ -100,19 +105,58 @@ namespace FCM_m
 
         private void SetNewU()//새로운 소속행렬 구성
         {
+            lastU = (double[,])u.Clone();//비교를위해 새로운 행렬 구하기전 복사
+
             for (int i = 0; i < dataCount; i++)
             { // i번째 데이터 Xi
+                double numerator = 0; //거리 분자
+                double denominator = 0; //거리 분모
+                double sum = 0;
                 for (int j = 0; j < CLUSTER; j++)
                 {// j번째 클러스터 Cj
-                    //ㅇ이어서
+                    for (int k = 0; k < CLUSTER; k++)
+                    {// k번째 클러스터 Ck
+                        //각각의 값 말고 배열을 보낼 때사용하는것도 만들어볼것
+                        numerator += Distance(inputData[i, 0], inputData[i, 1], centroid[j, 0], centroid[j, 1]);
+                        denominator += Distance(inputData[i, 0], inputData[i, 1], centroid[k, 0], centroid[k, 1]);
+                        sum += Math.Pow((numerator / denominator), 2 / (M - 1));
+                    }
+                    u[i, j] = 1 / sum;
                 }
             }
         }
 
-        private double[,] Distance(double[,] temp)
+        private double Distance(double x1, double y1, double x2, double y2)
         {
+            double distance = 0;
+            distance = Math.Sqrt(Math.Pow(x2 - x1, 2.0) + Math.Pow(y2 - y1, 2.0));
 
-            return temp;
+            return distance;
+        }
+
+        private void Comparison()
+        {
+            if (reCount > 1)
+            {
+                double max = double.MinValue;
+                for (int i = 0; i < dataCount; i++)
+                {
+                    for (int j = 0; j < CLUSTER; j++)
+                    {
+                        double temp = u[i, j] - lastU[i, j];
+                        if (max < temp)
+                        {
+                            max = temp;
+                        }
+                    }
+                }
+
+                //임계값과 비교
+                if (max <= THRESHOLD)
+                {
+                    replay = false;
+                }
+            }
         }
     }
 }

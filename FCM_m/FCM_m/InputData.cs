@@ -48,9 +48,8 @@ namespace FCM_m
 
         public int[,] GetinputData() //배열 inputData를 배열 temp에 통째로 복사 후 temp를 return함 (보안)
         {
-            int[,] temp = new int[inputData.GetLength(0), inputData.GetLength(1)];
-            temp = (int[,])inputData.Clone();
-
+            int[,] temp = (int[,])inputData.Clone();
+            //= new int[inputData.GetLength(0), inputData.GetLength(1)];
             return temp;
 
 

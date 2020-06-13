@@ -36,11 +36,12 @@ namespace FCM_m
         public void Run() //입력된 데이터를 x, y구분하여 input_data에 2차원배열로 대입한다.
         {
             int count = 0;
-            for (int i = 0; i < data.Length; i++)
+            for (int i = 0; i < data.Length/2; i++)
             {
-                for (int j = 0; j < 1; j++)
+                for (int k = 0; k < 2; k++)
                 {
-                    inputData[i, j] = data[count++];
+                    inputData[i, k] = data[count];
+                    count++;
                 }
             }
         }

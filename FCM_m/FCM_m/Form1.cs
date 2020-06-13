@@ -19,6 +19,7 @@ namespace FCM_m
         private void button1_Click(object sender, EventArgs e)
         {
             FCM fcm = new FCM();
+            fcm.Run();
         }
     }
 }

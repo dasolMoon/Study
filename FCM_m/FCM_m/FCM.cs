@@ -56,20 +56,17 @@ namespace FCM_m
 
         }
 
-        private void Run() //FCM 핵심 메소드 Run
+        public void Run() //FCM 핵심 메소드 Run
         {
             //초기 랜덤 소속함수 정의
-            for (int j = 0; j < u.GetLength(0); j++)
+            for(int i =0; i<dataCount; i++)
             {
-                for (int i = 0; i < CLUSTER; i++)
-                {
-                    u[i, j] = 1;
-                }
+                int c = i % 3;
+                u[c, i] = 1;
             }
 
-
             // 각 클러스터에 대한 중심 벡터 계산
-            setCentroid();
+            SetCentroid();
 
             //조건에 맞지 않으면(메소드에서 수정해주지않으면) while구간 반복
             while (replay)
@@ -78,19 +75,20 @@ namespace FCM_m
             }
         }
 
-        private void setCentroid()// 각 클러스터에 대한 중심 벡터 계산
+        private void SetCentroid()// 각 클러스터에 대한 중심 벡터 계산
         {
-            double numerator = 0;//분자 설정
-            double denominator = 0;//분모 설정
-
-            for (int j = 0; j < CLUSTER; j++)
-            {
-
-                for (int i = 0; i < dataCount; i++)
+           for (int j = 0; j < CLUSTER; j++)
+           {
+                for (int r = 0; r < INPUT_TYPE; r++)  //x와 y 따로 - 변수 r 사용
                 {
-                    /* 한글파일의 centroid 세부부분 읽어볼것
-                    denominator += Math.Pow(u[j, i], M);
-                    numerator += Math.Pow(u[j, i], M) **/
+                    double numerator = 0;//분자 설정
+                    double denominator = 0;//분모 설정
+                    for (int i = 0; i < dataCount; i++)
+                    {
+                        numerator += Math.Pow(u[j, i], M) * inputData[i, r]; //분자
+                        denominator += Math.Pow(u[j, i], M);//분모
+                    }
+                    centroid[j, r] = numerator / denominator;
                 }
             }
         }

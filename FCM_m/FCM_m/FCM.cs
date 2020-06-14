@@ -24,7 +24,7 @@ namespace FCM_m
         static double THRESHOLD = 0.0002;
 
         //입력데이터
-        int[,] inputData = null;
+        double[,] inputData = null;
         int dataCount = 0; //입력 데이터의 갯수
 
         //전체 입력데이터의 소속도 입력하는 배열

@@ -15,3 +15,11 @@ D:\GitRoom\study\FCM_m\FCM_m\obj\Debug\FCM_m.Properties.Resources.resources
 D:\GitRoom\study\FCM_m\FCM_m\obj\Debug\FCM_m.csproj.GenerateResource.cache
 D:\GitRoom\study\FCM_m\FCM_m\obj\Debug\FCM_m.exe
 D:\GitRoom\study\FCM_m\FCM_m\obj\Debug\FCM_m.pdb
+F:\MOONDO\study\FCM_m\FCM_m\bin\Debug\FCM_m.exe
+F:\MOONDO\study\FCM_m\FCM_m\bin\Debug\FCM_m.pdb
+F:\MOONDO\study\FCM_m\FCM_m\obj\Debug\FCM_m.csprojAssemblyReference.cache
+F:\MOONDO\study\FCM_m\FCM_m\obj\Debug\FCM_m.Form1.resources
+F:\MOONDO\study\FCM_m\FCM_m\obj\Debug\FCM_m.Properties.Resources.resources
+F:\MOONDO\study\FCM_m\FCM_m\obj\Debug\FCM_m.csproj.GenerateResource.cache
+F:\MOONDO\study\FCM_m\FCM_m\obj\Debug\FCM_m.exe
+F:\MOONDO\study\FCM_m\FCM_m\obj\Debug\FCM_m.pdb

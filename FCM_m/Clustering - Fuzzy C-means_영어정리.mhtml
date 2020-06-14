@@ -1,0 +1,571 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/cmeans.html
+Subject: Clustering - Fuzzy C-means
+Date: Sun, 14 Jun 2020 02:31:31 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--u2NADIZPdMy1AdcSGAzrEY2I93eGFgTEejfD8m39qj----"
+
+
+------MultipartBoundary--u2NADIZPdMy1AdcSGAzrEY2I93eGFgTEejfD8m39qj----
+Content-Type: text/html
+Content-ID: <frame-3504EFE315C545200AB00DD568D0DF9D@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/cmeans.html
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head>=
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dwindows-1=
+252">
+<title>Clustering - Fuzzy C-means</title>
+
+</head>
+
+<body>
+<p align=3D"center"><strong><font size=3D"+3" face=3D"Times New Roman, Time=
+s, serif"><em>A=20
+  Tutorial on Clustering Algorithms</em></font></strong></p>
+<hr>
+<strong><font size=3D"+2"> </font> </strong>=20
+<p align=3D"center"><font face=3D"Times New Roman, Times, serif"><a href=3D=
+"https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/index.html">=
+Introduction</a>=20
+  | <a href=3D"https://home.deib.polimi.it/matteucc/Clustering/tutorial_htm=
+l/kmeans.html">K-means</a> | Fuzzy C-means | <a href=3D"https://home.deib.p=
+olimi.it/matteucc/Clustering/tutorial_html/hierarchical.html">Hierarchical<=
+/a>=20
+  | <a href=3D"https://home.deib.polimi.it/matteucc/Clustering/tutorial_htm=
+l/mixture.html">Mixture of Gaussians</a> | <a href=3D"https://home.deib.pol=
+imi.it/matteucc/Clustering/tutorial_html/links.html">Links</a></font></p>
+<hr>
+<p align=3D"center"><font size=3D"+2" face=3D"Arial, Helvetica, sans-serif"=
+><strong>Fuzzy=20
+  C-Means Clustering</strong></font><br>
+</p>
+<p align=3D"justify"><font size=3D"+1" face=3D"Arial, Helvetica, sans-serif=
+"><em>The=20
+  Algorithm</em></font><font face=3D"Times New Roman, Times, serif"><br>
+  Fuzzy c-means (FCM) is a method of clustering which allows one piece of d=
+ata=20
+  to belong to two or more clusters. This method (developed by <a href=3D"h=
+ttps://home.deib.polimi.it/matteucc/Clustering/tutorial_html/cmeans.html#du=
+nn">Dunn=20
+  in 1973</a> and improved by <a href=3D"https://home.deib.polimi.it/matteu=
+cc/Clustering/tutorial_html/cmeans.html#bezdek">Bezdek in 1981</a>) is freq=
+uently=20
+  used in pattern recognition. It is based on minimization of the following=
+ objective=20
+  function:</font></p>
+<p align=3D"center"> <img src=3D"https://home.deib.polimi.it/matteucc/Clust=
+ering/tutorial_html/images/image019.gif" align=3D"absmiddle"> &nbsp;&nbsp;&=
+nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;=20
+  <img src=3D"https://home.deib.polimi.it/matteucc/Clustering/tutorial_html=
+/images/image021.gif" align=3D"absmiddle"></p>
+<p align=3D"justify"><font face=3D"Times New Roman, Times, serif">where <em=
+>m</em>=20
+  is any real number greater than 1, <em>u<sub>ij</sub></em> is the degree =
+of=20
+  membership of <em>x<sub>i</sub></em> in the cluster <em>j</em>, <em>x<sub=
+>i</sub></em>=20
+  is the <em>i</em>th of d-dimensional measured data, <em>c<sub>j</sub></em=
+> is=20
+  the d-dimension center of the cluster, and ||*|| is any norm expressing t=
+he=20
+  similarity between any measured data and the center.<br>
+  </font><font face=3D"Times New Roman, Times, serif">Fuzzy partitioning is=
+ carried=20
+  out through an iterative optimization of the objective function shown abo=
+ve,=20
+  with the update of membership <em>u<sub>ij</sub></em> and the cluster cen=
+ters=20
+  <em>c<sub>j</sub></em> by:</font></p>
+<p align=3D"center"> <img src=3D"https://home.deib.polimi.it/matteucc/Clust=
+ering/tutorial_html/images/image023.gif" align=3D"absmiddle"> &nbsp;&nbsp;&=
+nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;=20
+  <img src=3D"https://home.deib.polimi.it/matteucc/Clustering/tutorial_html=
+/images/image025.gif" align=3D"texttop"></p>
+<p align=3D"justify"><font face=3D"Times New Roman, Times, serif">This iter=
+ation will=20
+  stop when <img src=3D"https://home.deib.polimi.it/matteucc/Clustering/tut=
+orial_html/images/image027.gif" align=3D"absmiddle">, where <img src=3D"htt=
+ps://home.deib.polimi.it/matteucc/Clustering/tutorial_html/images/image002.=
+gif" align=3D"absmiddle">=20
+  is a termination criterion between 0 and 1, whereas <em>k</em> are the it=
+eration=20
+  steps. This procedure converges to a local minimum or a saddle point of <=
+em>J<sub>m</sub></em>.<br>
+  </font><font face=3D"Times New Roman, Times, serif">The algorithm is comp=
+osed=20
+  of the following steps:</font></p>
+<table width=3D"75%" border=3D"1" align=3D"center">
+  <tbody><tr>=20
+    <td><ol>
+        <li><font face=3D"Times New Roman, Times, serif" align=3D"justify">=
+<em>Initialize=20
+          U=3D[u<sub>ij</sub>] matrix, U<sup>(0)<br>
+          </sup></em></font></li>
+        <li><em align=3D"justify"><font face=3D"Times New Roman, Times, ser=
+if">At=20
+          k-step: calculate the centers vectors C<sup>(k)</sup>=3D[c<sub>j<=
+/sub>] with U<sup>(k)<br>
+          <br>
+          </sup></font></em><em align=3D"justify"><font face=3D"Times New R=
+oman, Times, serif"><img src=3D"https://home.deib.polimi.it/matteucc/Cluste=
+ring/tutorial_html/images/image025.gif"><br>
+          </font></em></li>
+        <li><em align=3D"justify"><font face=3D"Times New Roman, Times, ser=
+if">Update=20
+          U<sup>(k)</sup> , U<sup>(k+1)<br>
+          <br>
+          </sup></font></em><em align=3D"justify"><font face=3D"Times New R=
+oman, Times, serif"><img src=3D"https://home.deib.polimi.it/matteucc/Cluste=
+ring/tutorial_html/images/image023.gif"><br>
+          </font></em></li>
+        <li><em align=3D"justify"><font face=3D"Times New Roman, Times, ser=
+if">If=20
+          || U<sup>(k+1)</sup> - U<sup>(k)</sup>||&lt;<img src=3D"https://h=
+ome.deib.polimi.it/matteucc/Clustering/tutorial_html/images/image002.gif">=
+=20
+          then STOP; otherwise return to step 2.</font></em></li>
+      </ol></td>
+  </tr>
+</tbody></table>
+<p><strong><font face=3D"Times New Roman, Times, serif">Remarks</font></str=
+ong><font face=3D"Times New Roman, Times, serif"><br>
+  As already told, data are=20
+  bound to each cluster by means of a Membership Function, which represents=
+ the=20
+  fuzzy behaviour of this algorithm. To do that, we simply have to build an=
+ appropriate=20
+  matrix named U whose factors are numbers between 0 and 1, and represent t=
+he=20
+  degree of membership between data and centers of clusters.<br>
+  For a better understanding, we may consider this simple mono-dimensional =
+example.=20
+  Given a certain data set, suppose to represent it as distributed on an ax=
+is.=20
+  The figure below shows this:</font></p>
+<p align=3D"center"><img src=3D"https://home.deib.polimi.it/matteucc/Cluste=
+ring/tutorial_html/images/image031.gif"></p>
+<p align=3D"justify"><font face=3D"Times New Roman, Times, serif">Looking a=
+t the picture,=20
+  we may identify two clusters in proximity of the two data concentrations.=
+ We=20
+  will refer to them using =91A=92 and =91B=92. In the first approach=20
+  shown in this tutorial - the k-means algorithm - we associated each datum=
+ to=20
+  a specific centroid; therefore, this membership function looked like this=
+:</font></p>
+<p align=3D"center"><img src=3D"https://home.deib.polimi.it/matteucc/Cluste=
+ring/tutorial_html/images/image033.gif"></p>
+<p align=3D"justify"><font face=3D"Times New Roman, Times, serif">In the FC=
+M approach,=20
+  instead, the same given datum does not belong exclusively to a well defin=
+ed=20
+  cluster, but it can be placed in a middle way. In this case, the membersh=
+ip=20
+  function follows a smoother line to indicate that every datum may belong =
+to=20
+  several clusters with different values of the membership coefficient.</fo=
+nt></p>
+<p align=3D"center"><img src=3D"https://home.deib.polimi.it/matteucc/Cluste=
+ring/tutorial_html/images/image035.gif"></p>
+<p align=3D"justify"><font face=3D"Times New Roman, Times, serif">In the fi=
+gure above,=20
+  the datum shown as a red marked spot belongs more to the B cluster rather=
+ than=20
+  the A cluster. The value 0.2 of =91m=92 indicates the degree of membershi=
+p=20
+  to A for such datum. Now, instead of using a graphical representation, we=
+ introduce=20
+  a matrix U whose factors are the ones taken from the membership functions=
+:</font></p>
+<p align=3D"center"> <font face=3D"Times New Roman, Times, serif"><img src=
+=3D"https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/images/im=
+age037.gif">=20
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=3D"https://home.=
+deib.polimi.it/matteucc/Clustering/tutorial_html/images/image039.gif"></fon=
+t></p>
+<p align=3D"center"><font face=3D"Times New Roman, Times, serif">(a)&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(b)</font></p>
+<p align=3D"justify"><font face=3D"Times New Roman, Times, serif">The numbe=
+r of rows=20
+  and columns depends on how many data and clusters we are considering. Mor=
+e exactly=20
+  we have C =3D 2 columns (C =3D 2 clusters) and N rows, where C is the tot=
+al number=20
+  of clusters and N is the total number of data. The generic element is so =
+indicated:=20
+  <em>u<sub>ij</sub></em>.<br>
+  In the examples above we have considered the k-means (a) and FCM (b) case=
+s.=20
+  We can notice that in the first case (a) the coefficients are always unit=
+ary.=20
+  It is so to indicate the fact that each datum can belong only to one clus=
+ter.=20
+  Other properties are shown below:</font></p>
+<ul>
+  <li><img src=3D"https://home.deib.polimi.it/matteucc/Clustering/tutorial_=
+html/images/image041.gif" align=3D"absmiddle"></li>
+  <li><img src=3D"https://home.deib.polimi.it/matteucc/Clustering/tutorial_=
+html/images/image043.gif" align=3D"absmiddle"></li>
+  <li><img src=3D"https://home.deib.polimi.it/matteucc/Clustering/tutorial_=
+html/images/image045.gif" align=3D"absmiddle"></li>
+</ul>
+<p> </p>
+<p align=3D"justify"><em><font size=3D"+1" face=3D"Arial, Helvetica, sans-s=
+erif">An=20
+  Example</font></em><font face=3D"Times New Roman, Times, serif"><br>
+  Here, we consider the simple case of a mono-dimensional application of th=
+e FCM.=20
+  Twenty data and three clusters are used to initialize the algorithm and t=
+o compute=20
+  the U matrix. Figures below (taken from our <a href=3D"https://home.deib.=
+polimi.it/matteucc/Clustering/tutorial_html/AppletFCM.html">interactive=20
+  demo</a>) show the membership value for each datum and for each cluster. =
+The=20
+  color of the data is that of the nearest cluster according to the members=
+hip=20
+  function.</font></p>
+<p align=3D"center"><img src=3D"https://home.deib.polimi.it/matteucc/Cluste=
+ring/tutorial_html/images/image046.jpg"></p>
+<p align=3D"justify"><font face=3D"Times New Roman, Times, serif">In the si=
+mulation=20
+  shown in the figure above we have used a fuzzyness coefficient m =3D 2 an=
+d we=20
+  have also imposed to terminate the algorithm when <img src=3D"https://hom=
+e.deib.polimi.it/matteucc/Clustering/tutorial_html/images/image048.gif" ali=
+gn=3D"absmiddle">.=20
+  The picture shows the initial condition where the fuzzy distribution depe=
+nds=20
+  on the particular position of the clusters. No step is performed yet so t=
+hat=20
+  clusters are not identified very well. Now we can run the algorithm until=
+ the=20
+  stop condition is verified. The figure below shows the final condition re=
+ached=20
+  at the 8th step with m=3D2 and <img src=3D"https://home.deib.polimi.it/ma=
+tteucc/Clustering/tutorial_html/images/image002.gif" align=3D"absmiddle">=
+=3D0.3:</font></p>
+<p align=3D"center"><img src=3D"https://home.deib.polimi.it/matteucc/Cluste=
+ring/tutorial_html/images/image049.jpg"></p>
+<p align=3D"justify"><font face=3D"Times New Roman, Times, serif">Is it pos=
+sible to=20
+  do better? Certainly, we could use an higher accuracy but we would have a=
+lso=20
+  to pay for a bigger computational effort. In the next figure we can see a=
+ better=20
+  result having used the same initial conditions and <img src=3D"https://ho=
+me.deib.polimi.it/matteucc/Clustering/tutorial_html/images/image002.gif" al=
+ign=3D"absmiddle">=3D0.01,=20
+  but we needed 37 steps!</font></p>
+<p align=3D"center"><img src=3D"https://home.deib.polimi.it/matteucc/Cluste=
+ring/tutorial_html/images/image051.jpg"></p>
+<p><font face=3D"Times New Roman, Times, serif">It is also important to not=
+ice that=20
+  different initializations cause different evolutions of the algorithm. In=
+ fact=20
+  it could converge to the same result but probably with a different number=
+ of=20
+  iteration steps.</font></p>
+<p align=3D"justify"><font size=3D"+1" face=3D"Arial, Helvetica, sans-serif=
+"><em>Bibliography</em></font></p>
+<ul>
+  <li>
+    <div align=3D"justify"><font face=3D"Times New Roman, Times, serif"><a =
+name=3D"dunn"></a>J.=20
+      C. Dunn (1973): "A Fuzzy Relative of the ISODATA Process and Its Use=
+=20
+      in Detecting Compact Well-Separated Clusters", <em>Journal of Cyberne=
+tics</em>=20
+      3: 32-57</font></div>
+  </li>
+  <li>=20
+    <div align=3D"justify"><font face=3D"Times New Roman, Times, serif"><a =
+name=3D"bezdek"></a>J.=20
+      C. Bezdek (1981): "Pattern Recognition with Fuzzy Objective Function=
+=20
+      Algoritms", Plenum Press, New York</font></div>
+  </li>
+  <li>=20
+    <div align=3D"justify"><font face=3D"Times New Roman, Times, serif">Tar=
+iq Rashid:=20
+      =93Clustering=94<br>
+      <a href=3D"http://www.cs.bris.ac.uk/home/tr1690/documentation/fuzzy_c=
+lustering_initial_report/node11.html">http://www.cs.bris.ac.uk/home/tr1690/=
+documentation/fuzzy_clustering_initial_report/node11.html</a></font></div>
+  </li>
+  <li>=20
+    <div align=3D"justify"><font face=3D"Times New Roman, Times, serif">Han=
+s-Joachim=20
+      Mucha and Hizir Sofyan: =93Nonhierarchical Clustering=94<br>
+      <a href=3D"http://www.quantlet.com/mdstat/scripts/xag/html/xaghtmlfra=
+me149.html">http://www.quantlet.com/mdstat/scripts/xag/html/xaghtmlframe149=
+.html</a></font></div>
+  </li>
+</ul>
+<hr>
+<p align=3D"center"><font size=3D"+1" face=3D"Times New Roman, Times, serif=
+"><a href=3D"https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/=
+AppletFCM.html">Fuzzy=20
+  C-means interactive demo</a></font></p>
+<hr>
+<p align=3D"center"><font face=3D"Times New Roman, Times, serif"><a href=3D=
+"https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/kmeans.html"=
+>Previous=20
+  page</a> | <a href=3D"https://home.deib.polimi.it/matteucc/Clustering/tut=
+orial_html/hierarchical.html">Next page</a> </font></p>
+
+
+</body><whale-quicksearch translate=3D"no"><template shadowmode=3D"closed">=
+<div class=3D"quicksearch"></div></template></whale-quicksearch></html>
+------MultipartBoundary--u2NADIZPdMy1AdcSGAzrEY2I93eGFgTEejfD8m39qj----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/images/image019.gif
+
+R0lGODlhnQAvAHcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAMAAwCU
+ACkAgAAAAAAAAAL/hI+pyxlhHmzogUmz3rz7z2FYNlngiaaqCrVhtcbyLLsjddP6zjf22wsKeaJO
+cYjE5YaSiKeZjCpK0qqVeM3iLlruaNnNurRjbvjsBCfHZTTZLPZChZK6fX6569WO36FtBViBF2PC
+YBjBh0hSB8PHBHdItAjTp/boGCkotfkXROg5Rem04eeJ+Rk5xYQ6yCKX+aaINKqkYYjKZlFrxOvl
+87F32/o3e0SiSXxIBXzJCfJ4jPw1fFd5q3oNGYxNik39+nIjXarX/dSNSF7GDo2c5uC9jf6+W2rG
+jEK+Ok5prwyMW7U8xQjGa1EC4QlQ6rL5aLQCoEOBOTpNTEGNmCl9ge+0LcglD54kHRnFXTTSMVTA
+LQ47SUz5655CjIzi2aq5xOXLlSKr7LE26CcoSTlPzgBksYdQO0GXtqqV9GhFo258Uk21s6rWreH6
+wDTINSxHd2LLfgRzCa3ZtTZX8fTItixCKMYgZo0bJSHdgEyv4u0yauhEwX8LnzKMGNrdxAcKAAA7
+
+------MultipartBoundary--u2NADIZPdMy1AdcSGAzrEY2I93eGFgTEejfD8m39qj----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/images/image021.gif
+
+R0lGODlhQwATAHcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAMABAA9
+AAsAgAAAAAAAAAJVBGKpy+0PVZjRoIozu4/qr3HLJIJQSVqptZWtCp/ohdD0G9XH7ibe6BPdGr/N
+7jAc9Vg+CdOxktieyk7QecwBn8tYlRfrWrlZqGtFsgnTaWy2eNIUAAA7
+
+------MultipartBoundary--u2NADIZPdMy1AdcSGAzrEY2I93eGFgTEejfD8m39qj----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/images/image023.gif
+
+R0lGODlhnQBgAKEAAAAAAAAAAP///////yH5BAEAAAAALAIABACYAFgAAAL+hI+py+0Powmy2ouz
+3i14DobiSCJUiabqeq7uC1dtTNf0bOc6ie/+f+kBh8SFsIgkHpNMnWfZjEqn1Kr1igV8Jtkuh9KC
+mp5kbzZsTmPQPLL7DY/L5/S6/Y5/aicz9vitVnXyIRYYqLelBVZoCJS4xtUoNahBKUnFqGB5OZWZ
+QMjZuQEWGkWa8VhaVKba6vqq5rkKa5Qma3ib1JOX69TY2wWMJHwltOnLeJsqqhm5c/qQS1xj7Iwc
+gQNabXV0nAMd/cn6WczgbQPukL23iFheu+eT3mHCbr46H9+sf41dv6hp2Tc+8PZNG8VPnZk+BcnF
+QzRND71MBweGg9cn4rn+fxIqooPQzZqYOA5BJqTnxU9Jhwy/yDh5b6FAa/X0QZOm8EC+hqFCPqQZ
+RGc4iq58AlSEdE2qpTB5cjKKcsQ6oq2gxpRKjiqmOzUNXhWxq+k+QVAeWQ3Io5lWsktaen0xb+dY
+bjPdsoQhUO7KYoXO9jOZcmRPW2UH28p5yeNHxH94OX48Dui7qJIU3wCcOKW/p8E6Gp581bKjMxeb
+bry8FlM0lTVFv0w9yU7Xu/LE7jXFVSjGH3pnf6b9zLZvzrtrw45tbl1xiCAk3jtuirFpkRolC4Xe
+ZKfyt9Z1wrn93DNfytP5RXwtnq53d8MjoWG9GS3H+KpJuUlo9XR6u1xLsOuS7Fx5RxHSS4D2XJde
+KX6BV8lUCf7WGnlfOEifgsXN1dyBGkpnIXfiYGWecN1VduFfHHYYoXGYveLaYrS0GAOM2R1GC4PM
+jFAAADs=
+
+------MultipartBoundary--u2NADIZPdMy1AdcSGAzrEY2I93eGFgTEejfD8m39qj----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/images/image025.gif
+
+R0lGODlhYwBYAHcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAIAAwBe
+AFIAgAAAAAAAAAL/hI+pyxdhHmy02ouz27r730EiSJbmNp7qeo0TC8cRJ9eqNNv6zvf+DwwKh8SG
+5IjEtVxFzYPyxCCbzujiZWFSM0oFFgpIbasl13ecPXtf6qqo/bNew7QyPHin5075eLb+x9Dn0zch
+x+akp4gX+DQItjg0iGPl+Bhm+CZ0abQHwslXMen5AWqSV0jqYVomWij2yVqaRCsViSZIW7uE2+v7
+i6YmB8wjS5wreAzTZqzshanU7MwxdTu9Kjxc1HW9EjW5250gLT4no4uerr7OLrqWVI6AGH+jra3z
+fc8INE9FzkXn3ylGsLYRtMYPYY1+2wQuMUQvosSJFCsCY6dvTcBraRkxcTnSjds4gAWViQTUqeS0
+jn80xWPpURXFjmIcBnMnc2YghRJTxdxj0w9ORxZzjrPkwGU5chCX4hz68mknnhddpaHqC6OtoPi0
+8ioKNmyxK1ydiiWb7Ky5Z2qfVSubNQJIrBbvnYxRAAA7
+
+------MultipartBoundary--u2NADIZPdMy1AdcSGAzrEY2I93eGFgTEejfD8m39qj----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/images/image027.gif
+
+R0lGODlhnQAdAHcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAIAAACb
+ABoAgAAAAAAAAAL/hI+pyxgNo5y0voqzBnf7D3Lh+HXkiSZmyirr2sYLDMvsG3VBzV18edgFHS6b
+EQfRJQ0/j3IIJRplSIbp8WRGR1eR9iudtqozRzfazFzP3rA4RS4GfTthO41Zh2nvsWqphQV2h6Ik
+SPjXVyhnBZVVNxjy9MgIOIFFZ0aHidc2ZOfZ6WaR5elW0wTaUAfZ8zW5ZTmHGCkhSlTKwxZrdrkX
+C3pIgVNayNoKdjtqyiRa9SjMnPNX3Fftm6hy20pJG402eqh6vegKvlqpPZ0Na05e1uuqTJI5z5ym
++tvDud9/3D8r3wtIwTAdEVLQHLpssubYyxMpTqKH9GoxtKjIVsSLOxMzSsGXzuM6PssciXylkeNJ
+K99M/UC4EuY6XivRoSr5qWbLdBQV5dPHsqZCWT2FNjJaEWmMokoxoigAADs=
+
+------MultipartBoundary--u2NADIZPdMy1AdcSGAzrEY2I93eGFgTEejfD8m39qj----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/images/image002.gif
+
+R0lGODlhDQAPAHcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAYABAAH
+AAcAgAAAAAAAAAIMhBF5ccbtFIJvImkKADs=
+
+------MultipartBoundary--u2NADIZPdMy1AdcSGAzrEY2I93eGFgTEejfD8m39qj----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/images/image031.gif
+
+R0lGODlhVQEeAHcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAEADQBC
+ARAAgQAAAAAAADMzMwECAwL/hI+py+0Po5y02ouz3jv46AVAyJXmiabqyrZS+D2iMbv2jef6rsOk
+I6rxhsSi8YjzwYAHpfMJjUqn1Kr1is1qt9yu9wteBJHksvmMRjwbNWH6DY/LM0rg5zfP6/f5Jf8P
+GPgXI1hoeIiYqLjIyIPH8AhJOBKD93M5qRDJljmxKdMJ6mZJSOoGEprwqZZasRoXICB72iQrQFs7
+S2PrwTvCGzsbfAvpK2NMMYwrhgyhnEv8LN3sTK1qDb38gg3L/avLZqw8LQzM/XwMnuytyX6tTh7t
+i76tzmz/TqxBr8efr41u3Dxz5fBlq2YQoT4Q7tQgixdkYMJwE3dV9GcB45xXIjRaNZmEqU2lkQA9
+stJmB6UmkytHlXopUmVLZyY5emJppAAAOw==
+
+------MultipartBoundary--u2NADIZPdMy1AdcSGAzrEY2I93eGFgTEejfD8m39qj----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/images/image033.gif
+
+R0lGODlheQHnAHcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAwAAQBb
+AeQAgQAAAAAAADMzM5aWlgL/hI+py+0Po5x0jlGz3rz7D4biSJbUZabqyrbuC5doTNf2jef2rPf+
+DwzmeMKi8YhMKpfMpvMJjUqnUyL1is0qrdqu91vjgsfkMkhsTqvXDDT7DY/L56EAIGC/5xv7Cp7y
+B9gnMkhnqIOXF1h4wDjhyJcAeUfpFzEJgXG4+bHnyYD5ECoJaFm64capCvFp4JioFxv7R2uXqGhr
+K5s7y+t6++urd+tZu8uRuqq80FpJ2kupCy2ti+vaSP3rXKk4e53Nrd2NqrlsLtqYrjCOGxguO9z8
+zn6t3n2PgF9PT37uD1orVyFw2ejpkxZt3r58C/ktWqgQWbl/FDMQBDbPFyxn/w+nudtHTJyxgPYQ
+Vjz5YlSLQSZLqEQJE8TLFB/hmZjZZmLMnTwfJOsJNObPoHRqElUw9Ggco0oPJG26BiPUqf6kUr2q
+ihhOmDqxwtHq9alXL1qZHhU7VkvZrRXRpr2y1mxQt2/Vvu1aN2revV/5+lXDFiXdv1ECnxxM+Inh
+tngTf1lMEbFjJpD/SZ6spDLmzTg0c/4cw/O5xqCniF52uXSQ08pSq/7BepXr1z1iq5pNO4ft27mx
+7O4N3FTw4TZ+H8JNHIZxQ8iTu1hOp7lzFtDnSJ+uorqc69hvdv/uHbz4OnfHU+egPQ538xs1pIez
+3vw24Vjjs0ef1v54w3H7+///D2CAAg5IIIDy0YRegQouyGCDDoJ1oEsJPkhhhRZWGKGEG1zIYYce
+/pchCfyNZVWIneDnVYkmTrghie2t2JmLcsGYkozv0biOjTjGmOKLO4am44813BiVj0I+F+SRyiWp
+JJI9ztikiExGuQKRgBlJZXhYqZilhlti2eUIVqbBZZiETGmmmGimSd6TY+74ZhllsulBnGTMSSeK
+X0KZp0Vr9qnnVXgCSh9VgxL6yJ+IFjrVoYuyouijEtg5hqOSRuLmpYEaCqamkGbqqZ+ghnrKnpSu
+eOpjnZIKSqSs5jjqq5+aKuukrtZaD624ohPrrszcimuqZK3qq7BdWCqrsWr/Eburslkg+6qzvjEb
+LLC1SgsXtddamyy30XrLKrZUQBsuuKSKa5q23fbq6zO6tvsru/DmKqi638o7L7pSkHuuuaHqW5i9
+5eILL8BQ8Puvv54arJjA/RLcLsNOILywwppK3ATFF1t8KcaUOZwwxMVyLKnHS2jcMcmPmpwZyBWL
+3KzKi7KcBMoly4wozUjYvDLOhOp8BM8z+wwo0EYInTPRfRpdBNI/K50n00I4XTTUdEq9mssbw1wt
+19t6nSWfrYId5TiMQkV1hH1shTUQaX9GLSxWsW3jh3bfjTeB7h36ydqimpp34IIPzlZZ6Jg93yV1
+E8544xbubTim27DteOWW/1+OeeaB/4p421fol9hakpvkORWgEwYhQAK9o9rpf2ksNmGu+xU7eKTN
+i7tqxDL74kbt+b7IjNq6LHDxNf3uDvKUh7J77Q5obZoA0kMSgPQCTFL99K5Yjwf3d3Cf/fXhv+K9
+KOUDcj4Aboz/yPnsv+89++1rz0f6kthvEf5k6r89/aCUPz74TS+A/JPf8/h3QP+pjzQGZIX74gdB
+7TXQgQpcBwInmL8KAuaCCPwe/QgoQfCJUIP9ux4FTeiH9K2vg/fznwBN+MKZYDAfHCQh+mxohuYx
+7yPAK0Y7gvG82BGvJqkwHkuSh0QfWoRPOpSJ8xA1u9xJcYpUpM3tqgiVKLliET5X3OJZuujFuYAx
+jEAZIxnPiMZniS6NQtDiEvNROtpJwY1+WFsc9/LEH9BREHCMWB57sMdHFCNiNmlCICcVEkIWsl7Y
+UOQfYcLDO77Fjk845CUoGazUMcGSrMDk14BoSDMWZ42fbGQo2YgI5TGMk6jEgihbCctYylIor5yl
+bGppS06wMpen5OVOdunLYApzmGHAJTG5eEzGJDMyxlymGoDpzGhKc5rUpGU1b3nN2zQzm12A5mcK
+AAA7
+
+------MultipartBoundary--u2NADIZPdMy1AdcSGAzrEY2I93eGFgTEejfD8m39qj----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/images/image035.gif
+
+R0lGODlhgwHnAHcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAsAAQBn
+AeQAggAAAAAAADMzM5aWlv8AAAECAwECAwECAwP/CLrc/jDKSau9OMuhu/9gKI5kaZ5oenFq675w
+LM90y9Z4ru9879++oHBILBKBxqRyyWw6n9CodEqtWq9YDTLL7Xqj2694TOaFy+i0+nReu99wSjtO
+r9vv+FgAENjz/RGAGX0YhIWCJYh5i0l9foaKC5EXk4ENlXyZgxWYcoyfLYCiEJ0TpZeFm6kfc6Cu
+HaMKk45/tbWEuHuOj7q6tr23wLK7w8J/u6K5vyCtr84WsZqowZm+1Na+vLKS2MPSmo+3293g3uGs
+z+kf0ZHnvIbltsfR8e7bkvfdguGx9ujqACnl6qWInL585fjhM4gQX8KGkCA2/BewYqJ6xDD+iugN
+/xwwWgzegRx4DZ62UxZTwkD5ApE1FSxVyoTZA15HmiKazdzJc0PPn0Ar6Az6yibRBkOPfjKqVEHS
+pngyQp2aUirVq+mQxVT5FOsbrVe7elWjlSlRsWPRlN1qEW3aMWvNAnX7Vq1XunXJsM3L98vevoCx
+/G0beNHgingLZzkcMLHiK4wBOn5cJbK6yZSnWM7MWcjmzqB3fHaGOXST0a9Km16C2pXq1Y3uwiYr
+e7ZdrK9tD2mtu/cI3r6DewDOKLdw0bWPcyG+yLhyHMzzOH9OIzqe6dRlWM/O/Vv37ye228EOXsJg
+8XXIl3cAElby9TPOv4evZ918+i3Xxd3Pv7/////+7aAefg7BAuCBCCaoIIFpnKfggxBGiAyDeukn
+4YUYIhjDgAzKV0Z/L3BIoIdu7JeCiPS1p0occbFBIRPoEbGWCSi+uKIdM9pIm2Fl6Xgbj2Ax46MR
+MZ4WZAc1DklBkUZOiKSSMj7ToxZQ7qbOlCtU6RlAWAqlZRBMRtHll06EKcWRZJ5WlZMTJJlmSCqx
+6dObOphJhZwQuEmndxXh6YCedNpZmVV/7pmDoIOqaKgPiCYq16LQ9eSnU5BW99OkgL7ZqBV+Zprm
+po4q4imZoIaKVKXxBTUpqvWpSiirrbr6KKw4yQrPqF+WCll7uGqpK6e80pqfUhn1WuWvwBpiLJT/
+yCbb7JDP3qmosClEK+0eyypprWaOZAvtVLt46+O2Z75K7UXgTnsuCeSWO+u69qX7LrzuydsufveK
+qS698drLL7r+/vvbVeYKrEG+UBRs8CoBL9wvVKs6zAnBCktsClYVW2wJxfNqzB7G+3q8MVUZizwN
+ySGb/DHHCIPX8hMlq3wPyinLPLO9L3OXc5k127xzkx2b/DMTA8Qs9FhGizw0jElrvLQSHDRt8dNJ
+RC21w1QbwcLVC2ddxNZcC+z1EcUEPXVdER/9VtpKv8e2026HTe/YQyDxto6PTvsu3ULYLXd555y8
+z80rh8Xe3SPCeXI8hCtu+CWI4+s4KTdXwjfT/z0nXiDl31he2N/ZDT6y6A9c/kMgoD9HeuGdj0zV
+HJEDPvnsqyOUTTV83n77Qri/xLvucAJfUO+4/048KsJTKvyYL9beuPObT9UK8xQGPnk/5t13eOzd
+2ZSMVXtTRlDm1Jqub+qaai8495Wab8Yg7C/qvoAHozm3+qbYv+78OriVI7z8ywFe/lc+3bSogI/p
+hIlsZLbZQaU0BJQcn5aEv+jlL4LfgV72cFOtA7rMgRfjYAjrxx+QQYMkI5zgBh8Hkwy58IUwpB4n
+MkcP120lgLH5TQx3yMMFGahkvluhCl0Hnx4a8YgyXFISG2dD+CHxiVCMohSnSEUkUg4lGiyMuP9s
+pbAabgyHTmgGGJeTNlqQr4F12SJQ0KccNV5qjJ9wo83maJGa9UxFIzEJJPaIiTOikRs3RCP49MhH
+QAayFBUj3wWlJIBGWq6RAugjJB8xyQBMkg+VzKQjSXFJU3SyEJ+kFCkIQEqWWLKTp4wkJjWpylSq
+EhqhZA8kXynLTYIglXD0pC1LF8tLoJKVugAmLjm5y0D0ckmxbEMASEkAU86Skpt0ZR8uKU1KHFMS
+zyQmLYdzzah0c5jGtCUuhzlOYGoTkd0M5zYBoExmOvOX0XwmObMJy2LW0p7YxOcg0nkHO84Lj4Us
+hkCPYZ6gKRJyoiroIfdByHcY0olKnNVBUZfhyzTS8aIY9QIbM9qcE26Uo+nxaPxA2tEZjpSk0hHI
+RFEaR5X+kaUlNak8YEoybtB0bdbx4E2JdsvteK+ia6tCYl4Kv5AAFWk5cwxRBWJUjK70dCJY6gxt
+elFjgIFdxNGfzLQRFeDo0ak3wZFUUdfUOTJUCqp5av7K6jOtLuE1aiUrVX1m1HzlJq4IdSvcIHdV
+FOD1plL5qAuc89edYmE6hTVsVsaq2MaiSo6OnQJkI9tXyiplspYNY2Y3y9nOnsWzcwHtTzArWrKV
+diekPa1qV8va1uYlta4VYGwRM9vG0CoBADs=
+
+------MultipartBoundary--u2NADIZPdMy1AdcSGAzrEY2I93eGFgTEejfD8m39qj----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/images/image037.gif
+
+R0lGODlhYwB4AHcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAMAAgBc
+AHMAgAAAAAAAAAL/hI+py40BoZszRoqzC7pvD2ZcSAJjiT7NCUoLm6KwcYXjbMY6TttqwtN1gsHP
+YVYUYoi+oyKprKyaPWC0xGz9tldP1sutdsEM6CucG5PPTZxZjaa5Wrw3XHyP59l7Z1/6hxf4NJhW
+SDhod6e4c8j3x6gWmTLZVYnliBh4GcVJlSm45yk0ugZqCMRZd+pnhapRo3mKpEexyvqKWnnLSttq
+Wpsou1uGm8tC/AjqGypSjMuc66yc6dY8LbtcdhkbvFlYGhMOazyOPQteng693tuOLswe7z4P/y1/
+T79pcdK9OEVijqtoedwIHNLsRrZ/z0zRIlgQoENCEBlSW4KGQ0Ub4/wOSrsGKJRHcxgbIvwlZ2FE
+k+RQmiDowp8EJB03fgx5DIY1QTeSXSxpjd8ZjTN1Bdy2i9cHjS9Bnsy3NEe/RvUaMlXoFGefJDWu
+HvH4FJK6qtXeaSPriKStsVDPti2L9pBarXDfpjVbVyw+vfr42vPrFnDerWwF342Ld2VfMZGmqpSb
+GDLiyWPmaqFs2OJfwns5LxZV2PNm0J1Jf1Y8GnXgB6pYDq4yyZ/Lw1x8uvqM7OhPvLk/eRPc+/Jj
+3r9dZwVe/KdlYEZ9z5Y8ENPuuGBFgF0eVvRq06k1b1ddzYIkfgUAADs=
+
+------MultipartBoundary--u2NADIZPdMy1AdcSGAzrEY2I93eGFgTEejfD8m39qj----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/images/image039.gif
+
+R0lGODlhewB4AHcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAMAAgB1
+AHMAgAAAAAAAAAL/hI+py40BoZu0zhit3o/7TwXgyIjkCZroqSZSmX3vEtMr2h5mbrR82LMFhbcR
+z6dAbpQdHbEoSzangJ+DWXpCOUeqs+rBaofbsPSbtF68rmzZ3EY31Q0xW/62dPFg/trf55ansUcm
+R/f0g4g4GBenePcH6cfYCDgTWFXDxYSBCWh5FgpVGVo6Soj6p7py2ujKehUrOGtUK3oblQu6u7oL
+22uYCxxMXGb8G5ypXIFMyryk7Hw7fWP1+bC5dO05Vjs5KdwsnhOe7LiMO86b3j5b6C4OxHstjatG
+bBdZ3XoPA6zvkj10i7hEiscPhz9Z0UDhG0ilYEN5FOOxAucrFUKG/724TcFgRAydhCygaexoUg/E
+lBzPsWw57GVGajJh0qxJKyZOb+928oxFUlVQWz7R6SzKDtXQUZ5UaBvk8Qq2ZozqpVtaR8jDFBU1
+uYFnCZ45gwLrgQ270OhEdyLMqkNLUMrUefJ2ZDmboulZOy8AsnEK4y3ciGlV4gmIDatNvgdplWtK
+A2zfTxKO6H3LOGncrJHVBirXwxhGrbokygUpV1PbTKIDH0aGaazm1W3tKkQ6G8zqridxV3WyGzBX
+3Lxj0NYx1zBxxWSXr0TKfC3050Wj955ejDhvpdotCu1uXblv6j7Dr3OeXbt5uuPTo0epnvzO9TPL
+y8dJ36Z995y9643yvx1T4N1XU379tQffey4huCB2CTJ4FIQ3KRihgw1WR6BMBuaEIX/Z1JEcVfUB
+aAppJsLBjVUPGiIWHBWpeGFmAW7G04ZjyEgiYRzOONghWvnl0I490ejCbmttJdiQOgrpC5KeKenj
+gb052dh3Z+ADW1cwVojcR9XEVqRs3wzoYYcrmnnhfh2h9lJTBQAAOw==
+
+------MultipartBoundary--u2NADIZPdMy1AdcSGAzrEY2I93eGFgTEejfD8m39qj----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/images/image041.gif
+
+R0lGODlhdwAZAHcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAIABQBy
+ABEAgAAAAAAAAAKohI+pm+H4WDhusottw7x7pRlWKEbUh5IhebFot0KL+np0jc/VLcrglmvtTDiT
+S5Lx9X7K4OxUOjYeGimw1XTxnEzANllNDbex7pLbLcPO1isSem560cgvdu5Vs9pqvNtPJ2NXVwLI
+YXVzNBhI04ZXkUcxQTQFKRcpGXUZaEhEGffm+LT2xlmjRSpqVjpqmuLjOBJkefrpKiZKdbvL6zTZ
+CxwMoypcXFMAADs=
+
+------MultipartBoundary--u2NADIZPdMy1AdcSGAzrEY2I93eGFgTEejfD8m39qj----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/images/image043.gif
+
+R0lGODlhaQAvAHcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAIAAwBj
+ACkAgAAAAAAAAALMhG8RsOgPo5y02tjU3bx72yTfSJZUaKaqia7uCx4tTNfKXOf6zvf+DwwKh8Si
+EXNLKjXHHxM5xJFws5tEmrO+WqiQ9oHVhT/cybM59izHZ6iIllbLZO1EeOHdrKXxTh7BdzJnAzf4
+BlbxV1hYBpGW0WXnuIZB2OjwKFmV0icHyIAJovHEhDdVp8J1OSXZNMIWw9DpGmqWKGJKq3fymDtL
+u7ekuxMsPHyMnKxcUvW7nPpsExi9iEgNg5d0eA0tq+XMfYUEHv5JXi6KXlMAADs=
+
+------MultipartBoundary--u2NADIZPdMy1AdcSGAzrEY2I93eGFgTEejfD8m39qj----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/images/image045.gif
+
+R0lGODlhgQAtAHcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAMAAwB8
+ACcAgAAAAAAAAAL/hI+paxHtmJy02ovzfE37D4Yi8JTjiaahyanuCx9sTNdi29r6vkUkDwwKh8Si
+8YhMKpdMkuMJjTZ3vk91caVeoRss4vkFc3IaMIPMI6O9X7as8waZFWvd1qLG5sbtSt0pVGcSRxGV
+9bMHp3j2B1GII/c3+HMBSUeJmchYKZnpcZjAh+lH2Cc6ugbaJWGJodpH2RhaqniqGSo7uzqKlwuZ
+O5v6dssbVlnoSNj46gncJtyRV0wnW+3oTO2WnAEtg8asq81YgkPuiluFDeudXqPO9j6VYo08LW9X
+z7p4n/boH89vhaGBeOwFfDEwYa+DDBs6fAgx4pJUACUGsqhEVUWMFS4EcUwyhsvGjyfKiSFpBNQc
+lBYKAAA7
+
+------MultipartBoundary--u2NADIZPdMy1AdcSGAzrEY2I93eGFgTEejfD8m39qj----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/images/image048.gif
+
+R0lGODlhqAAdAHcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAIAAACk
+ABoAgAAAAAAAAAL/hI+pyxgNo5y0gmez3gnzD35eSJaXiabKqLYSy7rySs/2AkdeEBu8r9rtOrWb
+EejQHXpLJGrYTBKPx1xj9IA6mRvsyfmVUm9WBtYbDZPOYjXY8jPzuK4yzoGZx7VrfDtGd/UGFphi
+V5T1heYGMpSoBqixaEYVKYikNTcoEsVnCWFHl3eRd1aaFadElDo5UYjjSdmWtvLJ2Lk3GqZ7e9fx
+CJnxukrLdNibOrVJystH2jT8BhwNp6eZRj3LmFzUC429BOwt+71MRgvX7SOqTbz1DtQTm1Qqli28
+bq/a/uxrHg9OUbMKMOrdC2Gwi7pfvgKhesgsorWI4fqh02PxB7cgVBqFWLzEr10yIRtN8JIG6p+N
+k+TQjWmEMqSil1IK2aLJgaUbLjorqRx0EKefmzzFvdToSplQTvJkGj067uJShDxd+pla0l/UqU+4
+GvJKMyjYhUcKAAA7
+
+------MultipartBoundary--u2NADIZPdMy1AdcSGAzrEY2I93eGFgTEejfD8m39qj------

@@ -34,7 +34,6 @@ namespace FCM_m
 
            // { 1.0, 1.0,6.0,6.0,7.0,7.0,6.0,7.0,2.0,3.0,4.0,4.0,6.0,4.0,4.5,5.5,2.0,6.0,3.0,7.0};
 
-
             inputData = new double[data.Length/INPUT_TYPE, INPUT_TYPE];
         }
 

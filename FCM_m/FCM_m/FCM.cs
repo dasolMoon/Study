@@ -120,7 +120,13 @@ namespace FCM_m
                         //각각의 값 말고 배열을 보낼 때사용하는것도 만들어볼것
                         numerator += Distance(inputData[i, 0], inputData[i, 1], centroid[j, 0], centroid[j, 1]);//분자
                         denominator += Distance(inputData[i, 0], inputData[i, 1], centroid[k, 0], centroid[k, 1]);//분모
-                        sum += Math.Pow((numerator / denominator), 2 / (M - 1));
+                        double temp = Math.Pow((numerator / denominator), 2 / (M - 1));
+                        
+                        if (double.IsNaN(temp)) //만약 0으로 나누는 경우가 생겨 값이 무한대가 된다면
+                        {                       //숫자가 아니라면 
+                            temp = 1;           //해당 계산값을 1로 설정한다.
+                        }                       //영의 몫에 가까운 숫자가 0.00(...)1이면 1% temp는 0.00(...)1가 됨
+                        sum += temp;
                     }
                     u[i, j] = 1 / sum;
                 }

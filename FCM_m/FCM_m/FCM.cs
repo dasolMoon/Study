@@ -6,7 +6,7 @@ using System.Text;
  * 2020.06.12
  * FCM을 실행하는 클래스
  * InputData클래스에서 inputData를 가져온 후 FCM작업을 수행한다
- * 1.전체(U)행렬 초기화 ㅇ
+ * 1.전체(U)행렬 초기화 
  * 2.클러스터 중심백터 계산
  * 3.전체(U)행렬 업데이트 
  * 4.UU(k+1) - UU(k)< (임계값)이면 정지, 아니면 2단계로 돌아가 반복
@@ -27,7 +27,7 @@ namespace FCM_m
         double[,] inputData = null;
         int dataCount = 0; //입력 데이터의 갯수
 
-        //전체 입력데이터의 소속도 입력하는 배열
+        //전체 입력데이터의 소속함수
         double[,] u = null;//, uFuzzy=null;
         double[,] lastU = null;
 
@@ -35,6 +35,7 @@ namespace FCM_m
         //클러스터별 중심값
         double[,] centroid = null;
 
+        //반복
         bool replay = true;//반복을 결정하는 bool변수
         int reCount = 0;// ()반복 횟수 
 
@@ -117,8 +118,8 @@ namespace FCM_m
                     for (int k = 0; k < CLUSTER; k++)
                     {// k번째 클러스터 Ck
                         //각각의 값 말고 배열을 보낼 때사용하는것도 만들어볼것
-                        numerator += Distance(inputData[i, 0], inputData[i, 1], centroid[j, 0], centroid[j, 1]);
-                        denominator += Distance(inputData[i, 0], inputData[i, 1], centroid[k, 0], centroid[k, 1]);
+                        numerator += Distance(inputData[i, 0], inputData[i, 1], centroid[j, 0], centroid[j, 1]);//분자
+                        denominator += Distance(inputData[i, 0], inputData[i, 1], centroid[k, 0], centroid[k, 1]);//분모
                         sum += Math.Pow((numerator / denominator), 2 / (M - 1));
                     }
                     u[i, j] = 1 / sum;
@@ -126,15 +127,12 @@ namespace FCM_m
             }
         }
 
-        private double Distance(double x1, double y1, double x2, double y2)
+        private double Distance(double x1, double y1, double x2, double y2)//Data1과 Data2 거리 계산
         {
-            double distance = 0;
-            distance = Math.Sqrt(Math.Pow(x2 - x1, 2.0) + Math.Pow(y2 - y1, 2.0));
-
-            return distance;
+            return Math.Sqrt(Math.Pow(x2 - x1, 2.0) + Math.Pow(y2 - y1, 2.0));
         }
 
-        private void Comparison()
+        private void Comparison() //종료조건을 만족하는지 검사 
         {
             if (reCount > 1)
             {

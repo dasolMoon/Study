@@ -162,5 +162,26 @@ namespace FCM_m
                 }
             }
         }
+
+        public string GetResult()
+        {
+            string temp = null;
+
+            for (int i = 0; i < CLUSTER; i++)
+            {
+                temp+= "[ "+(i + 1) + "번째 클러스터 ] \r\n\r\ncentroid x : " + centroid[i, 0] + " y : " + centroid[i,1];
+                int count = 0;
+                for (int j = 0; j < dataCount; j++)
+                {
+                    if(u[j,i] != 0)
+                    {
+                        temp += "\r\n\r\n" + ++count + "번째 데이터\r\n소속도 : " + u[j,i]+"\r\nx : " + centroid[i, 0] + " y : " + centroid[i, 1] + "\r\n";
+                    }
+                }
+                temp += "\r\n\r\n\r\n";
+            }
+
+            return temp;
+        }
     }
 }

@@ -20,6 +20,7 @@ namespace FCM_m
         {
             FCM fcm = new FCM();
             fcm.Run();
+            textBox1.Text= fcm.GetResult();
         }
     }
 }

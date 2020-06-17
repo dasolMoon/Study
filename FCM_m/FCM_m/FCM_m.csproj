@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FCM.cs" />
+    <Compile Include="FCM_mm.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

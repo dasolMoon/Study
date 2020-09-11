@@ -2,20 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-/*
- * 2020.06.12
- * FCM을 실행하는 클래스
- * InputData클래스에서 inputData를 가져온 후 FCM작업을 수행한다
- * 1.전체(U)행렬 초기화 
- * 2.클러스터 중심백터 계산
- * 3.전체(U)행렬 업데이트 
- * 4.UU(k+1) - UU(k)< (임계값)이면 정지, 아니면 2단계로 돌아가 반복
- *                                        
- *  
- */
-namespace FCM_m
+
+namespace PFCM_R_m
 {
-    class FCM
+    class PFCM_R
     {
         //정적변수
         static int CLUSTER = 3; //클러스터 개수
@@ -39,7 +29,7 @@ namespace FCM_m
         bool replay = true;//반복을 결정하는 bool변수
         int reCount = 1;// ()반복 횟수 
 
-        public FCM()
+        public PFCM_R()
         {
             Init();
         }
@@ -96,7 +86,7 @@ namespace FCM_m
                         denominator += Math.Pow(u[i, k], M);//분모
                     }
                     centroid[k, j] = numerator / denominator;
-                   
+
                 }
             }
         }
@@ -104,14 +94,14 @@ namespace FCM_m
 
         private void SetNewU()//새로운 소속행렬 구성
         {
-           double[,] dw = new double[dataCount, CLUSTER];
+            double[,] dw = new double[dataCount, CLUSTER];
 
             /* new weight */
-            for (int i = 0; i<CLUSTER; i++)
+            for (int i = 0; i < CLUSTER; i++)
             {
-                for (int j = 0; j<dataCount; j++)
+                for (int j = 0; j < dataCount; j++)
                 {
-                    for (int k = 0; k<INPUT_TYPE; k++)
+                    for (int k = 0; k < INPUT_TYPE; k++)
                     {
                         dw[j, i] += Math.Pow((inputData[j, k] - centroid[i, k]), 2);
                     }
@@ -125,12 +115,12 @@ namespace FCM_m
                 }
             }
 
-            for (int i = 0; i<dataCount; i++)
+            for (int i = 0; i < dataCount; i++)
             {
-                for (int j = 0; j<CLUSTER; j++)
+                for (int j = 0; j < CLUSTER; j++)
                 {
                     double wsum = 0;
-                    for (int k = 0; k<CLUSTER; k++)
+                    for (int k = 0; k < CLUSTER; k++)
                     {
                         wsum += dw[i, k];
                     }
@@ -194,7 +184,7 @@ namespace FCM_m
 
         private double Distance(double x1, double y1, double x2, double y2)//Data1과 Data2 거리 계산
         {
-          //  return Math.Sqrt(Math.Pow(x2 - x1, 2.0) + Math.Pow(y2 - y1, 2.0));
+            //  return Math.Sqrt(Math.Pow(x2 - x1, 2.0) + Math.Pow(y2 - y1, 2.0));
             return Math.Pow(x2 - x1, 2.0) + Math.Pow(y2 - y1, 2.0);
 
         }
@@ -214,7 +204,7 @@ namespace FCM_m
                     }
                 }
 
-                if(max < THRESHOLD)
+                if (max < THRESHOLD)
                 {
                     replay = false;
                 }

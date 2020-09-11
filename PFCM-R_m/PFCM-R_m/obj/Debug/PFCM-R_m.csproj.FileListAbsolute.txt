@@ -1,0 +1,9 @@
+C:\Users\mds98\source\repos\PFCM-R_m\PFCM-R_m\bin\Debug\PFCM-R_m.exe
+C:\Users\mds98\source\repos\PFCM-R_m\PFCM-R_m\bin\Debug\PFCM-R_m.pdb
+C:\Users\mds98\source\repos\PFCM-R_m\PFCM-R_m\obj\Debug\PFCM-R_m.csprojAssemblyReference.cache
+C:\Users\mds98\source\repos\PFCM-R_m\PFCM-R_m\obj\Debug\PFCM_R_m.Form1.resources
+C:\Users\mds98\source\repos\PFCM-R_m\PFCM-R_m\obj\Debug\PFCM_R_m.Properties.Resources.resources
+C:\Users\mds98\source\repos\PFCM-R_m\PFCM-R_m\obj\Debug\PFCM-R_m.csproj.GenerateResource.cache
+C:\Users\mds98\source\repos\PFCM-R_m\PFCM-R_m\obj\Debug\PFCM-R_m.csproj.CoreCompileInputs.cache
+C:\Users\mds98\source\repos\PFCM-R_m\PFCM-R_m\obj\Debug\PFCM-R_m.exe
+C:\Users\mds98\source\repos\PFCM-R_m\PFCM-R_m\obj\Debug\PFCM-R_m.pdb

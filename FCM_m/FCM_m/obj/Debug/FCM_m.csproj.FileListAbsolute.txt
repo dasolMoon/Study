@@ -40,3 +40,12 @@ C:\Users\shdmf\Desktop\FCM_m\FCM_m\obj\Debug\FCM_m.Properties.Resources.resource
 C:\Users\shdmf\Desktop\FCM_m\FCM_m\obj\Debug\FCM_m.csproj.GenerateResource.cache
 C:\Users\shdmf\Desktop\FCM_m\FCM_m\obj\Debug\FCM_m.exe
 C:\Users\shdmf\Desktop\FCM_m\FCM_m\obj\Debug\FCM_m.pdb
+E:\Moondo\Study\FCM_m\FCM_m\bin\Debug\FCM_m.exe
+E:\Moondo\Study\FCM_m\FCM_m\bin\Debug\FCM_m.pdb
+E:\Moondo\Study\FCM_m\FCM_m\obj\Debug\FCM_m.csprojAssemblyReference.cache
+E:\Moondo\Study\FCM_m\FCM_m\obj\Debug\FCM_m.Form1.resources
+E:\Moondo\Study\FCM_m\FCM_m\obj\Debug\FCM_m.Properties.Resources.resources
+E:\Moondo\Study\FCM_m\FCM_m\obj\Debug\FCM_m.csproj.GenerateResource.cache
+E:\Moondo\Study\FCM_m\FCM_m\obj\Debug\FCM_m.csproj.CoreCompileInputs.cache
+E:\Moondo\Study\FCM_m\FCM_m\obj\Debug\FCM_m.exe
+E:\Moondo\Study\FCM_m\FCM_m\obj\Debug\FCM_m.pdb

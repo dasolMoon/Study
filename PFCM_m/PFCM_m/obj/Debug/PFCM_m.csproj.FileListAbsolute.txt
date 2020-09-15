@@ -1,0 +1,9 @@
+E:\Moondo\Study\PFCM_m\PFCM_m\obj\Debug\PFCM_m.csprojAssemblyReference.cache
+E:\Moondo\Study\PFCM_m\PFCM_m\obj\Debug\PFCM_m.Form1.resources
+E:\Moondo\Study\PFCM_m\PFCM_m\obj\Debug\PFCM_m.Properties.Resources.resources
+E:\Moondo\Study\PFCM_m\PFCM_m\obj\Debug\PFCM_m.csproj.GenerateResource.cache
+E:\Moondo\Study\PFCM_m\PFCM_m\obj\Debug\PFCM_m.csproj.CoreCompileInputs.cache
+E:\Moondo\Study\PFCM_m\PFCM_m\bin\Debug\PFCM_m.exe
+E:\Moondo\Study\PFCM_m\PFCM_m\bin\Debug\PFCM_m.pdb
+E:\Moondo\Study\PFCM_m\PFCM_m\obj\Debug\PFCM_m.exe
+E:\Moondo\Study\PFCM_m\PFCM_m\obj\Debug\PFCM_m.pdb
